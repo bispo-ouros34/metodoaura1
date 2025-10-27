@@ -1,7 +1,83 @@
+"use client" // 1. Adicionado para habilitar hooks do React
+
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import React, { useEffect, useRef } from 'react'; // 2. Hooks importados
 
 export default function Home() {
+  // Lógica e dados para o slider
+  const sliderRef = useRef(null);
+  const imageFiles = [
+      "IMG_2277-11_1x.webp",
+      "IMG_2277-25_1x.webp",
+      "IMG_2278-1.webp",
+      "IMG_2277-1_1x.webp",
+      "IMG_2277-2_1x.webp",
+      "IMG_2277-3_1x-1.webp",
+      "IMG_2277-4_1x.webp",
+      "IMG_2277-5_1x.webp",
+      "IMG_2277-6_1x.webp",
+      "IMG_2277-7_1x.webp",
+      "IMG_2277-8_1x.webp",
+      "IMG_2277-9_1x.webp",
+      "IMG_2277-10_1x.webp",
+      "IMG_2277-12_1x.webp",
+  ];
+
+  // 3. Lógica do slider (useEffect) integrada ao componente Home
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider || imageFiles.length === 0) return;
+
+    let intervalId;
+
+    const startAutoPlay = () => {
+      clearInterval(intervalId);
+
+      intervalId = setInterval(() => {
+        const firstSlide = slider.querySelector('.slide-item');
+        if (!firstSlide) {
+          clearInterval(intervalId);
+          return;
+        }
+
+        const slideWidth = firstSlide.offsetWidth;
+        const style = window.getComputedStyle(firstSlide);
+        const margin = parseFloat(style.marginRight);
+        const scrollStep = slideWidth + margin;
+
+        const isNearEnd = (slider.scrollLeft + slider.clientWidth + 1) >= slider.scrollWidth;
+
+        if (isNearEnd) {
+          slider.scrollTo({
+            left: 0,
+            behavior: 'smooth'
+          });
+        } else {
+          slider.scrollBy({
+            left: scrollStep,
+            behavior: 'smooth'
+          });
+        }
+      }, 3000);
+    };
+
+    const stopAutoPlay = () => {
+      clearInterval(intervalId);
+    };
+
+    startAutoPlay();
+    slider.addEventListener('mouseenter', stopAutoPlay);
+    slider.addEventListener('mouseleave', startAutoPlay);
+
+    return () => {
+      stopAutoPlay();
+      slider.removeEventListener('mouseenter', stopAutoPlay);
+      slider.removeEventListener('mouseleave', startAutoPlay);
+    };
+  }, [imageFiles.length]);
+
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
@@ -43,18 +119,23 @@ export default function Home() {
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">PINTA, dibuja online en 12 años</h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">Descubre todas las funcionalidades</p>
 
-          {/* Grid de screenshots */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div
-                key={i}
-                className="aspect-[9/16] bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center"
-              >
-                <p className="text-xs text-muted-foreground text-center px-2">Screenshot {i}</p>
-              </div>
-            ))}
+          <div className="slider-container">
+            {/* 4. A referência (ref) foi adicionada aqui */}
+            <div className="image-slider" ref={sliderRef}>
+              {imageFiles.map((fileName, index) => (
+                <div
+                  key={index}
+                  className="slide-item"
+                >
+                  <img
+                    src={`/image/${fileName}`}
+                    alt={`Slide ${index + 1}`}
+                    className="slide-image"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Definição de Variáveis de Cor (Tema Claro) */
 :root {
   --background: oklch(0.12 0.02 280);
   --foreground: oklch(0.98 0.01 280);
@@ -39,6 +40,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+/* Definição de Variáveis de Cor (Tema Escuro) */
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -74,6 +76,7 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
+/* Configuração do Tema Tailwind */
 @theme inline {
   --font-sans: "Geist", "Geist Fallback";
   --font-mono: "Geist Mono", "Geist Mono Fallback";
@@ -115,11 +118,94 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Estilos de Base Globais */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+
+/* --- Estilos Completos para o Slider de Imagens --- */
+
+.slider-container {
+  /* O container principal que define a área visível do carrossel. */
+  width: 100%;
+  overflow: hidden; /* Esconde qualquer conteúdo que transborde, como sombras ou slides em movimento. */
+}
+
+.image-slider {
+  /* O container que rola horizontalmente e contém os slides. */
+  display: flex;
+  overflow-x: auto; /* Habilita a rolagem horizontal. */
+  scroll-behavior: smooth; /* Anima a rolagem quando controlada por JS. */
+  scroll-snap-type: x mandatory; /* Força o "encaixe" em um slide ao final da rolagem manual. */
+  
+  /* MELHORIA: Usa 'gap' para um espaçamento consistente e moderno. */
+  gap: 1.5rem;
+
+  /* MELHORIA: Adiciona padding para que os slides não toquem as bordas. */
+  padding-inline: 1.5rem;
+
+  /* Código para esconder a barra de rolagem visualmente. */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.image-slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.slide-item {
+  /* O card individual do slide. */
+  flex-shrink: 0; /* Impede que os slides encolham para caber no container. */
+  width: 19%; /* Em telas grandes, exibe cerca de 5 itens. */
+  min-width: 150px; /* Garante uma largura mínima em telas muito estreitas. */
+  scroll-snap-align: center; /* Alinha o slide no centro da tela ao "encaixar". */
+
+  /* Estilos visuais do card. */
+  background: #1a0836;
+  border-radius: 12px;
+  overflow: hidden; /* Garante que a imagem não saia dos cantos arredondados. */
+  box-shadow: 0 4px 15px rgba(144, 71, 255, 0.1);
+  
+  /* MELHORIA: Transição suave para o efeito de hover. */
+  transition: transform 0.3s ease;
+}
+
+.slide-item:hover {
+  /* MELHORIA: Efeito sutil para indicar interatividade. */
+  transform: scale(1.03);
+}
+
+.slide-image {
+  /* A imagem dentro do card. */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer. */
+  aspect-ratio: 9 / 16; /* Mantém a proporção vertical consistente. */
+}
+
+/* --- Responsividade do Slider --- */
+
+/* Telas de Tablet (até 1024px) */
+@media (max-width: 1024px) {
+  .slide-item {
+    width: 30%; /* Exibe cerca de 3 itens por vez. */
+  }
+}
+
+/* Telas de Celular (até 768px) */
+@media (max-width: 768px) {
+  .image-slider {
+    gap: 1rem;
+    padding-inline: 1rem;
+  }
+  .slide-item {
+    width: 45%; /* Exibe 2 itens por vez. */
+    min-width: 120px;
   }
 }

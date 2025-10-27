@@ -1,0 +1,411 @@
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-background text-foreground">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-background" />
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 text-center lg:text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
+                Transforme sua vida com o Método AURA
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Descubra o poder da transformação pessoal através de técnicas comprovadas e orientação especializada.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button size="lg" className="text-lg px-8">
+                  Começar Agora
+                </Button>
+                <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
+                  Saiba Mais
+                </Button>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              {/* Espaço para imagem do celular/app */}
+              <div className="w-full max-w-sm aspect-[9/16] bg-muted/20 rounded-3xl border-2 border-primary/30 flex items-center justify-center">
+                <p className="text-muted-foreground text-center px-4">
+                  Imagem do App
+                  <br />
+                  (adicionar manualmente)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PINTA, dibuja online Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">PINTA, dibuja online en 12 años</h2>
+          <p className="text-center text-muted-foreground mb-12 text-lg">Descubre todas las funcionalidades</p>
+
+          {/* Grid de screenshots */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div
+                key={i}
+                className="aspect-[9/16] bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center"
+              >
+                <p className="text-xs text-muted-foreground text-center px-2">Screenshot {i}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Para todos los géneros Section */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Para todos los géneros...</h2>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold">Funcionalidades Avançadas</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">✓</span>
+                  <span>Ferramenta profissional de desenho</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">✓</span>
+                  <span>Interface intuitiva e fácil de usar</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">✓</span>
+                  <span>Compartilhe suas criações</span>
+                </li>
+              </ul>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[1, 2, 3, 4].map((i) => (
+                <div
+                  key={i}
+                  className="aspect-square bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center"
+                >
+                  <p className="text-xs text-muted-foreground">Imagem {i}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Planos Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">+ 540 Planos</h2>
+            <p className="text-muted-foreground text-lg">Escolha o plano perfeito para você</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {/* Plano Básico */}
+            <Card className="p-6 bg-card border-border">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold">Básico</h3>
+                <div className="text-4xl font-bold">Grátis</div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-sm">Acesso básico</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-sm">Ferramentas essenciais</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-sm">Suporte por email</span>
+                  </li>
+                </ul>
+                <Button className="w-full bg-transparent" variant="outline">
+                  Começar Grátis
+                </Button>
+              </div>
+            </Card>
+
+            {/* Plano Premium */}
+            <Card className="p-6 bg-primary/10 border-primary relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
+                Popular
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold">Premium</h3>
+                <div className="text-4xl font-bold">
+                  R$7 <span className="text-lg font-normal text-muted-foreground">USD</span>
+                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-sm">Tudo do Básico</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-sm">Ferramentas avançadas</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-sm">Suporte prioritário</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-sm">Sem anúncios</span>
+                  </li>
+                </ul>
+                <Button className="w-full">Assinar Agora</Button>
+              </div>
+            </Card>
+
+            {/* Plano Pro */}
+            <Card className="p-6 bg-card border-border">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold">Pro</h3>
+                <div className="text-4xl font-bold">
+                  R$15 <span className="text-lg font-normal text-muted-foreground">USD</span>
+                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-sm">Tudo do Premium</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-sm">Recursos ilimitados</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-sm">Suporte 24/7</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-sm">API access</span>
+                  </li>
+                </ul>
+                <Button className="w-full bg-transparent" variant="outline">
+                  Falar com Vendas
+                </Button>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Grid Section */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl space-y-20">
+          {/* Feature 1 */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="aspect-video bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center">
+              <p className="text-muted-foreground">Imagem Feature 1</p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-2xl md:text-3xl font-bold">Crie sem limites</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam.
+              </p>
+              <Button>Explorar Recursos</Button>
+            </div>
+          </div>
+
+          {/* Feature 2 */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4 order-2 md:order-1">
+              <h3 className="text-2xl md:text-3xl font-bold">Compartilhe suas criações</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam.
+              </p>
+              <Button>Ver Galeria</Button>
+            </div>
+            <div className="aspect-video bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center order-1 md:order-2">
+              <p className="text-muted-foreground">Imagem Feature 2</p>
+            </div>
+          </div>
+
+          {/* Feature 3 */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="aspect-video bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center">
+              <p className="text-muted-foreground">Imagem Feature 3</p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-2xl md:text-3xl font-bold">Ferramentas profissionais</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam.
+              </p>
+              <Button>Conhecer Ferramentas</Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Aja como 50 anos e além...</h2>
+          <p className="text-center text-muted-foreground mb-12 text-lg">Veja o que nossos usuários dizem</p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <Card key={i} className="p-4 bg-card border-border">
+                <div className="space-y-3">
+                  <div className="aspect-square bg-muted/20 rounded-lg flex items-center justify-center">
+                    <p className="text-xs text-muted-foreground">Foto {i}</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Nome {i}</p>
+                    <p className="text-sm text-muted-foreground">Profissão</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* More Features Section */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl space-y-16">
+          {[1, 2, 3, 4, 5].map((i) => (
+            <div key={i} className="grid md:grid-cols-2 gap-8 items-center">
+              <div className={`space-y-4 ${i % 2 === 0 ? "order-2 md:order-1" : ""}`}>
+                <h3 className="text-2xl md:text-3xl font-bold">Recurso Especial {i}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span>Benefício importante 1</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span>Benefício importante 2</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span>Benefício importante 3</span>
+                  </li>
+                </ul>
+              </div>
+              <div
+                className={`aspect-video bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center ${i % 2 === 0 ? "order-1 md:order-2" : ""}`}
+              >
+                <p className="text-muted-foreground">Imagem Recurso {i}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-balance">
+            Você está a 10 anos, comece hoje o programa...
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            Não perca mais tempo. Transforme sua vida agora mesmo.
+          </p>
+          <Button size="lg" className="text-lg px-12">
+            Começar Agora
+          </Button>
+        </div>
+      </section>
+
+      {/* Final Image Grid */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">¿Por qué más de 12 años...</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div
+                key={i}
+                className="aspect-square bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center"
+              >
+                <p className="text-xs text-muted-foreground">Imagem {i}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+          <div className="space-y-4">
+            {[
+              "Como funciona o método?",
+              "Quanto tempo leva para ver resultados?",
+              "Posso cancelar a qualquer momento?",
+              "Há garantia de devolução do dinheiro?",
+              "Preciso de experiência prévia?",
+              "O conteúdo é atualizado regularmente?",
+            ].map((question, i) => (
+              <Card key={i} className="p-6 bg-card border-border">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-semibold">{question}</h3>
+                  <span className="text-muted-foreground">+</span>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 px-4 border-t border-border">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <h4 className="font-bold mb-4">Método AURA</h4>
+              <p className="text-sm text-muted-foreground">
+                Transformando vidas através da educação e desenvolvimento pessoal.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Produto</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>Recursos</li>
+                <li>Preços</li>
+                <li>FAQ</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Empresa</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>Sobre</li>
+                <li>Blog</li>
+                <li>Contato</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Legal</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>Privacidade</li>
+                <li>Termos</li>
+                <li>Cookies</li>
+              </ul>
+            </div>
+          </div>
+          <div className="text-center text-sm text-muted-foreground pt-8 border-t border-border">
+            © 2025 Método AURA. Todos os direitos reservados.
+          </div>
+        </div>
+      </footer>
+    </main>
+  )
+}

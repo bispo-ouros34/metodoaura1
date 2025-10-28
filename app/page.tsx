@@ -8,20 +8,20 @@ export default function Home() {
   // Lógica e dados para o slider
   const sliderRef = useRef(null);
   const imageFiles = [
-      "IMG_2277-11_1x.webp",
-      "IMG_2277-25_1x.webp",
-      "IMG_2278-1.webp",
-      "IMG_2277-1_1x.webp",
-      "IMG_2277-2_1x.webp",
-      "IMG_2277-3_1x-1.webp",
-      "IMG_2277-4_1x.webp",
-      "IMG_2277-5_1x.webp",
-      "IMG_2277-6_1x.webp",
-      "IMG_2277-7_1x.webp",
-      "IMG_2277-8_1x.webp",
-      "IMG_2277-9_1x.webp",
-      "IMG_2277-10_1x.webp",
-      "IMG_2277-12_1x.webp",
+    "IMG_2277-11_1x.webp",
+    "IMG_2277-25_1x.webp",
+    "IMG_2278-1.webp",
+    "IMG_2277-1_1x.webp",
+    "IMG_2277-2_1x.webp",
+    "IMG_2277-3_1x-1.webp",
+    "IMG_2277-4_1x.webp",
+    "IMG_2277-5_1x.webp",
+    "IMG_2277-6_1x.webp",
+    "IMG_2277-7_1x.webp",
+    "IMG_2277-8_1x.webp",
+    "IMG_2277-9_1x.webp",
+    "IMG_2277-10_1x.webp",
+    "IMG_2277-12_1x.webp",
   ];
 
   // 3. Lógica do slider (useEffect) integrada ao componente Home
@@ -80,45 +80,43 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-background" />
+      {/* Hero Section - MODIFICADA CONFORME A IMAGEM */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
-                Transforme sua vida com o Método AURA
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance font-serif italic underline">
+                ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Descubra o poder da transformação pessoal através de técnicas comprovadas e orientação especializada.
+              <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+                Presentación revela cómo generar entre 100 a 500 dólares al día con la metodología de
+                <span className="block font-bold text-2xl md:text-3xl mt-2 bg-gradient-to-r from-blue-400 via-purple-400 to-purple-500 bg-clip-text text-transparent">
+                  “Productos extranjeros virales”
+                </span>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="text-lg px-8">
-                  Começar Agora
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
-                  Saiba Mais
-                </Button>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              {/* Espaço para imagem do celular/app */}
-              <div className="w-full max-w-sm aspect-[9/16] bg-muted/20 rounded-3xl border-2 border-primary/30 flex items-center justify-center">
-                <p className="text-muted-foreground text-center px-4">
-                  Imagem do App
-                  <br />
-                  (adicionar manualmente)
+              <p className="text-lg text-gray-300">
+                (Cualquier persona puede ganar dinero en menos de 7 días... te pruebo cómo)
+              </p>
+
+              <div className="pt-8 space-y-2">
+                <p className="text-sm font-bold tracking-wider uppercase">
+                  ¡DALE CLICK ABAJO!
+                </p>
+                <p className="text-xs text-gray-400">
+                  (El video inicia en un momento)
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
+      {/* FIM DA SEÇÃO MODIFICADA */}
+
 
       {/* PINTA, dibuja online Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">PINTA, dibuja online en 12 años</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">PDTA: ¿Si un niño de 13 años pudo, por qué tú no?</h2>
 
           <div className="slider-container">
             {/* 4. A referência (ref) foi adicionada aqui */}
@@ -324,7 +322,7 @@ export default function Home() {
               <p className="text-muted-foreground leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
+              </Capa>
               <Button>Conhecer Ferramentas</Button>
             </div>
           </div>

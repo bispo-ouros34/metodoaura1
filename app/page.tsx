@@ -83,11 +83,11 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - PLACEHOLDER VTURB ADICIONADO */}
+      {/* Hero Section - PADDINGS ENTRE FRASES AJUSTADOS */}
       <section className="relative min-h-screen flex items-start justify-center px-4 pt-10 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
-          {/* Centraliza o texto */}
           <div className="max-w-4xl mx-auto text-center">
+            {/* O space-y-6 define o padrão (1.5rem) */}
             <div className="space-y-6">
 
               <h1 className="text-xl md:text-3xl lg:text-4xl font-bold leading-snug text-balance font-serif italic underline">
@@ -101,11 +101,13 @@ export default function Home() {
                 </span>
               </p>
 
-              <p className="text-base md:text-2xl text-gray-300">
+              {/* AJUSTE 1: Padding reduzido pela metade (mt-3 = 0.75rem) */}
+              <p className="text-base md:text-2xl text-gray-300 mt-3">
                 (Cualquier persona puede ganar dinero en menos de 7 días... te pruebo cómo)
               </p>
 
-              <div className="pt-8 space-y-2">
+              {/* AJUSTE 2: Padding reduzido pela metade (mt-3 + pt-4 = 1.75rem) */}
+              <div className="mt-3 pt-4 space-y-2">
                 <p className="text-sm font-bold tracking-wider uppercase">
                   ¡DALE CLICK ABAJO!
                 </p>
@@ -116,20 +118,13 @@ export default function Home() {
             </div>
           </div>
 
-          {/* --- NOVO ESPAÇO PARA O VÍDEO VTURB --- */}
-          {/* A Vturb pode pedir que você adicione um 'id' a este div, por exemplo: id="vturb-player" */}
+          {/* --- ESPAÇO PARA O VÍDEO VTURB --- */}
           <div className="max-w-4xl mx-auto mt-8">
             <div className="w-full aspect-video bg-muted/20 rounded-lg border border-gray-700 flex items-center justify-center">
               <p className="text-gray-400">Espaço reservado para o vídeo (Vturb)</p>
             </div>
           </div>
-
-          {/* =============================================================
-            COLE O SCRIPT DA VTURB AQUI ABAIXO
-            =============================================================
-          */}
-          {/* <script src="..."></script> */}
-          {/* --- FIM DO ESPAÇO VTURB --- */}
+          {/* Cole o script Vturb aqui */}
 
         </div>
       </section>
@@ -142,7 +137,6 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">PDTA: ¿Si un niño de 13 años pudo, por qué tú no?</h2>
 
           <div className="slider-container">
-            {/* 4. A referência (ref) foi adicionada aqui */}
             <div className="image-slider" ref={sliderRef}>
               {imageFiles.map((fileName, index) => (
                 <div

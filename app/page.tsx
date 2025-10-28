@@ -4,31 +4,14 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import React, { useEffect, useRef } from 'react'; // 2. Hooks importados
 
-// Importando fontes
+// Importando a fonte Rethink Sans
 import { Rethink_Sans } from 'next/font/google';
-import localFont from 'next/font/local'; // Importa o 'next/font/local'
 
-// Instanciando a fonte Rethink Sans
+// Instanciando a fonte com o peso 400
 const rethinkSans = Rethink_Sans({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['400'], // Peso 400 conforme solicitado
 });
-
-// AJUSTE 2: Configuração da fonte local ivypresto-display
-// !!! VOCÊ PRECISA ADICIONAR O ARQUIVO DA FONTE EM /public/fonts/ !!!
-const ivypresto = localFont({
-  src: [
-    {
-      // O caminho para o seu arquivo de fonte. Mude se o nome for diferente.
-      path: '../../public/fonts/ivypresto-display-semibold.woff2', 
-      weight: '600', // Weight 600
-      style: 'normal',
-    },
-    // Adicione outros pesos/estilos se necessário
-  ],
-  display: 'swap',
-});
-
 
 export default function Home() {
   // Lógica e dados para o slider
@@ -120,7 +103,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg md:text-4xl text-white leading-relaxed">
-                Presentación revela cómo generar entre 100 a 500 dólares al dia con la metodología de
+                Presentación revela cómo generar entre 100 a 500 dólares al día con la metodología de
                 <span className="font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
                   {" "}“Productos extranjeros virales”
                 </span>
@@ -157,7 +140,7 @@ export default function Home() {
       {/* PINTA, dibuja online Section - AJUSTE 1 APLICADO */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          {/* AJUSTE 1: Fonte (Weight 700), Size 56px, Line Height 63px */}
+          {/* Ajuste 1: Font Weight 700 (font-bold), Size 56px (text-[56px]), Line Height 63px (leading-[63px]) */}
           <h2 className="text-[56px] leading-[63px] font-bold text-center mb-4">
             PDTA: ¿Si un niño de 13 años pudo,{" "}
             <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
@@ -188,14 +171,10 @@ export default function Home() {
       <section className="py-20 px-4 bg-black text-white">
         <div className="container mx-auto max-w-6xl">
 
-          {/* AJUSTE 2: Fontes customizadas, Size 56px, Line Height 63px */}
+          {/* Ajuste 2: Fontes, Pesos e Tamanhos aplicados */}
           <h2 className="text-[56px] leading-[63px] text-center mb-16">
-            {/* Parte A: Weight 400 (font-normal) */}
             <span className="font-normal">Ahora tienes</span>{" "}
-            {/* Parte B: ivypresto-display, Weight 600 (font-semibold) */}
-            <span className={`${ivypresto.className} font-semibold`}>
-              <span className="underline">dos opciones</span>...
-            </span>
+            <span className="font-serif italic font-semibold underline">dos opciones...</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16 max-w-6xl mx-auto relative items-stretch">

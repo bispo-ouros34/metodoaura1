@@ -137,7 +137,7 @@ export default function Home() {
       {/* FIM DA SEÇÃO HERO */}
 
 
-      {/* PINTA, dibuja online Section - GRADIENTE APLICADO AQUI */}
+      {/* PINTA, dibuja online Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
@@ -166,7 +166,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SEÇÃO "DOS OPCIONES" --- */}
+      {/* --- SEÇÃO "DOS OPCIONES" (AJUSTE DE ALTURA) --- */}
       <section className="py-20 px-4 bg-black text-white">
         <div className="container mx-auto max-w-6xl">
 
@@ -174,7 +174,9 @@ export default function Home() {
             Ahora tienes <span className="underline">dos opciones</span>...
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-16 max-w-5xl mx-auto relative items-start">
+          {/* AJUSTE: max-w-5xl -> max-w-6xl (Alarga o grid) */}
+          {/* AJUSTE: items-start -> items-stretch (Força colunas de mesma altura) */}
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-16 max-w-6xl mx-auto relative items-stretch">
 
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block z-20">
               <div className="bg-white p-4 rounded-lg shadow-lg">
@@ -183,7 +185,8 @@ export default function Home() {
             </div>
 
             {/* Coluna 1: Opção #1 */}
-            <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6 text-center z-10">
+            {/* AJUSTE: Adicionado 'h-full' para o card preencher a coluna */}
+            <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6 text-center z-10 h-full">
               <h3 className={`text-[28px] leading-[34px] mb-6 ${rethinkSans.className}`}>
                 <span className="font-normal bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent">Opción #1:</span>
                 {" "}Continuar con una vida sin Activos extranjeros virales....
@@ -197,7 +200,8 @@ export default function Home() {
             </div>
 
             {/* Coluna 2: Opção #2 */}
-            <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6 text-center z-10">
+            {/* AJUSTE: Adicionado 'h-full' para o card preencher a coluna */}
+            <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6 text-center z-10 h-full">
               <h3 className={`text-[28px] leading-[34px] mb-6 ${rethinkSans.className}`}>
                 <span className="font-normal bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">Opción #2:</span>
                 {" "}Vivir de los Activos extranjeros virales

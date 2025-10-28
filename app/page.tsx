@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - CORREÇÃO DO GRADIENTE E QUEBRAS PARA ATENDER AMBOS OS LAYOUTS */}
+      {/* Hero Section - CORREÇÃO FINAL DE QUEBRAS E GRADIENTE */}
       <section className="relative min-h-screen flex items-start justify-center px-4 pt-16 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -102,14 +102,14 @@ export default function Home() {
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
 
-              {/* CORREÇÃO APLICADA AQUI: Quebras e gradiente. */}
+              {/* CORREÇÃO APLICADA AQUI */}
               <p className="text-lg md:text-4xl text-white md:leading-snug">
-                Presentación revela cómo generar<br className="md:hidden" /> {/* Mobile: Quebra após "generar" */}
-                entre 100 a<br className="hidden md:inline" /> {/* Desktop: Quebra após "100 a" */}
-                500 dólares al día con la<br className="md:hidden" /> {/* Mobile: Quebra após "la" */}
-                metodología de{" "}
+                Presentación revela cómo generar<span className="md:hidden"></span>{" "} {/* Quebra mobile após "generar" */}
+                entre 100 a<br className="hidden md:inline" />{" "} {/* Quebra desktop após "100 a" */}
+                500 dólares al día con la<span className="md:hidden"></span>{" "} {/* Quebra mobile após "la" */}
+                metodología de<br className="hidden md:inline" />{" "} {/* Quebra desktop após "de" */}
                 <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                  “Productos<br className="md:hidden" /> {/* Mobile: Quebra após "Productos" */}
+                  “Productos<span className="md:hidden"></span>{" "} {/* Quebra mobile após "Productos" */}
                   extranjeros virales”
                 </span>
               </p>

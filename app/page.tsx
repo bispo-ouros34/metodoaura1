@@ -83,9 +83,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - AJUSTES 1, 2, 3 E 4 APLICADOS */}
-      {/* AJUSTE 4: 'items-center py-20' -> 'items-start pt-32 pb-20' (remove espaço superior) */}
-      <section className="relative min-h-screen flex items-start justify-center px-4 pt-32 pb-20 bg-black text-white">
+      {/* Hero Section - PADDING SUPERIOR AJUSTADO */}
+      {/* pt-32 -> pt-10 */}
+      <section className="relative min-h-screen flex items-start justify-center px-4 pt-10 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-6">
@@ -94,10 +94,8 @@ export default function Home() {
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
 
-              {/* AJUSTE 1: (Cor) text-gray-200 -> text-white */}
               <p className="text-lg md:text-4xl text-white leading-relaxed">
                 Presentación revela cómo generar entre 100 a 500 dólares al día con la metodología de
-                {/* AJUSTE 2: (Gradiente) Aplicado roxo/azul */}
                 <span className="font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
                   {" "}“Productos extranjeros virales”
                 </span>
@@ -111,7 +109,6 @@ export default function Home() {
                 <p className="text-sm font-bold tracking-wider uppercase">
                   ¡DALE CLICK ABAJO!
                 </p>
-                {/* AJUSTE 3: (Tamanho) text-xs -> text-base (e typo 'um' -> 'un') */}
                 <p className="text-base text-gray-400">
                   (El video inicia en un momento)
                 </p>

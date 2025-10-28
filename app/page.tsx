@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - AJUSTES DE QUEBRA E ESPAÇAMENTO MOBILE E DESKTOP */}
+      {/* Hero Section - AJUSTE 3 APLICADO */}
       <section className="relative min-h-screen flex items-start justify-center px-4 pt-16 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -102,15 +102,15 @@ export default function Home() {
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
 
-              {/* Ajuste 1 e 2: Quebras de linha fixas para desktop e mobile, e leading-tight para mobile */}
+              {/* Ajuste 3: Quebras de linha específicas para mobile e desktop */}
               <p className="text-lg md:text-4xl text-white leading-tight md:leading-snug">
-                Presentación revela cómo generar{" "}
-                <br /> {/* Quebra após "generar" */}
-                entre 100 a 500 dólares al día con la{" "}
-                <br /> {/* Quebra após "con la" */}
-                metodología de{" "}
+                Presentación revela cómo generar<br className="md:hidden" /> {/* Mobile */}
+                {" "}entre 100 a<br className="hidden md:inline" /> {/* Desktop */}
+                {" "}500 dólares al día con la<br className="md:hidden" /> {/* Mobile */}
+                {" "}metodología de<br className="hidden md:inline" /> {/* Desktop */}
+                {" "}“Productos<br className="md:hidden" /> {/* Mobile */}
                 <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                  “Productos extranjeros virales”
+                  {" "}extranjeros virales”
                 </span>
               </p>
 
@@ -174,11 +174,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SEÇÃO "DOS OPCIONES" --- */}
+      {/* --- SEÇÃO "DOS OPCIONES" - AJUSTES 1 e 2 APLICADOS --- */}
       <section className="py-20 px-4 bg-black text-white">
         <div className="container mx-auto max-w-6xl">
 
-          <h2 className="text-[56px] leading-[63px] text-center mb-16">
+          {/* Ajuste 2: Tamanho mobile reduzido text-[28px], mantido desktop text-[56px] */}
+          <h2 className="text-[28px] leading-tight md:text-[56px] md:leading-[63px] text-center mb-16">
             <span className="font-normal">Ahora tienes</span>{" "}
             <span className="font-serif italic font-normal underline">dos opciones...</span>
           </h2>
@@ -194,7 +195,8 @@ export default function Home() {
             {/* Coluna 1: Opção #1 */}
             <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6 text-center z-10 h-full">
               <h3 className={`text-[28px] leading-[34px] mb-6 ${rethinkSans.className}`}>
-                <span className="font-normal bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent">Opción #1:</span>
+                {/* Ajuste 1: Adicionado font-bold */}
+                <span className="font-bold bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent">Opción #1:</span>
                 {" "}Continuar con una vida sin Activos extranjeros virales....
               </h3>
               
@@ -208,7 +210,8 @@ export default function Home() {
             {/* Coluna 2: Opção #2 */}
             <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6 text-center z-10 h-full">
               <h3 className={`text-[28px] leading-[34px] mb-6 ${rethinkSans.className}`}>
-                <span className="font-normal bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">Opción #2:</span>
+                 {/* Ajuste 1: Adicionado font-bold */}
+                <span className="font-bold bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">Opción #2:</span>
                 {" "}Vivir de los Activos extranjeros virales
               </h3>
               

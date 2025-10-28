@@ -137,11 +137,14 @@ export default function Home() {
       {/* FIM DA SEÇÃO HERO */}
 
 
-      {/* PINTA, dibuja online Section */}
+      {/* PINTA, dibuja online Section - AJUSTES DE FONTE E QUEBRA APLICADOS */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl leading-tight md:text-[56px] md:leading-[63px] font-bold text-center mb-4">
-            PDTA: ¿Si un niño de 13 años pudo,{" "}
+          {/* Ajuste: Mobile text-2xl, Desktop text-[48px]. Quebras de linha condicionais */}
+          <h2 className="text-2xl leading-tight md:text-[48px] md:leading-snug font-bold text-center mb-4">
+            PDTA: ¿Si un niño de 13{/* Quebra Mobile */}
+            <br className="md:hidden" /> años{/* Quebra Desktop */}
+            <br className="hidden md:inline" /> pudo,{" "}
             <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
               por qué tú no?
             </span>
@@ -216,7 +219,7 @@ export default function Home() {
       </section>
       {/* --- FIM DA SEÇÃO DOS OPCIONES --- */}
 
-      {/* --- SEÇÃO BACKGROUD IMAGE (TAMANHO DA FONTE DOS PARÁGRAFOS AJUSTADO) --- */}
+      {/* --- SEÇÃO BACKGROUD IMAGE --- */}
       <section
         className="py-20 px-4 bg-black text-white bg-cover bg-center relative min-h-[70vh] flex items-center"
         style={{ backgroundImage: "url('/image/Slice-3-3.avif')" }}
@@ -232,29 +235,29 @@ export default function Home() {
                 ¿Cómo se va a ver tu vida luego de tener tu propio <strong className="text-white">ACTIVO EXTRANJERO VIRAL?</strong>
               </h2>
 
-              {/* Ajuste: text-lg -> text-base */}
+              {/* Bullet Point 1 */}
               <div className="flex items-start gap-4">
                 <span className="text-purple-400 text-2xl mt-1">💲</span>
-                <p className="text-base text-gray-200"> {/* Tamanho da fonte reduzido */}
+                <p className="text-base text-gray-200">
                   El primer día que saques tu ACTIVO extranjero es altamente{' '}
                   <strong className="text-white">PROBABLE QUE VENDA EN MENOS DE 5 HORAS</strong> - Recuerda: "{/* Aspas fora */}
                   <strong className="text-white">SON PRODUCTOS VIRALES</strong>{/* Aspas fora */} "
                 </p>
               </div>
 
-              {/* Ajuste: text-lg -> text-base */}
+              {/* Bullet Point 2 */}
               <div className="flex items-start gap-4">
                 <span className="text-purple-400 text-2xl mt-1">💸</span>
-                <p className="text-base text-gray-200"> {/* Tamanho da fonte reduzido */}
+                <p className="text-base text-gray-200">
                   Nunca te va a faltar el dinero en tu mesa ya que aprenderás la habilidad de{' '}
                   <strong className="text-white">tener tu propio activo viral con AURA</strong>
                 </p>
               </div>
 
-              {/* Ajuste: text-lg -> text-base */}
+              {/* Bullet Point 3 */}
               <div className="flex items-start gap-4">
                  <span className="text-purple-400 text-2xl mt-1">🌍</span>
-                <p className="text-base text-gray-200"> {/* Tamanho da fonte reduzido */}
+                <p className="text-base text-gray-200">
                   Podrás vender <strong className="text-white">a todo el mundo incluso sin saber otros idiomas</strong>. Lo que significa que podrás ganar lo mismo o más que empresarios de Estados Unidos, Europa y otras partes del mundo. (<strong className="text-white">Y lo mejor… sin visa.</strong>)
                 </p>
               </div>

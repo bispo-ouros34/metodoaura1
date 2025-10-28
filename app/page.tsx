@@ -72,8 +72,10 @@ export default function Home() {
 
     return () => {
       stopAutoPlay();
-      slider.removeEventListener('mouseenter', stopAutoPlay);
-      slider.removeEventListener('mouseleave', startAutoPlay);
+      if (slider) { // Adiciona verificação se slider existe no cleanup
+        slider.removeEventListener('mouseenter', stopAutoPlay);
+        slider.removeEventListener('mouseleave', startAutoPlay);
+      }
     };
   }, [imageFiles.length]);
 
@@ -312,7 +314,7 @@ export default function Home() {
             </div>
           </div>
 
-{/* Feature 3 */}
+          {/* Feature 3 -- BLOCO CORRIGIDO */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="aspect-video bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center">
               <p className="text-muted-foreground">Imagem Feature 3</p>
@@ -322,10 +324,15 @@ export default function Home() {
               <p className="text-muted-foreground leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam.
-              </p> {/* <--- CORRIGIDO AQUI */}
+              </p> 
+              {/* AQUI ESTAVA O ERRO </Capa>, AGORA ESTÁ CORRETO COM </p> */}
               <Button>Conhecer Ferramentas</Button>
             </div>
           </div>
+          {/* FIM DO BLOCO CORRIGIDO */}
+
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       <section className="py-20 px-4">

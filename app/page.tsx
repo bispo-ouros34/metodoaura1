@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section */}
+      {/* Hero Section - CORREÇÃO DO GRADIENTE E QUEBRAS */}
       <section className="relative min-h-screen flex items-start justify-center px-4 pt-16 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -102,14 +102,14 @@ export default function Home() {
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
 
-              {/* O gradiente já está aplicado aqui na span, universalmente */}
+              {/* CORREÇÃO: "Productos" movido para dentro da span. Quebras ajustadas */}
               <p className="text-lg md:text-4xl text-white leading-tight md:leading-snug">
                 Presentación revela cómo generar<br className="md:hidden" /> {/* Mobile */}
                 {" "}entre 100 a<br className="hidden md:inline" /> {/* Desktop */}
                 {" "}500 dólares al día con la<br className="md:hidden" /> {/* Mobile */}
-                {" "}metodología de<br className="hidden md:inline" /> {/* Desktop */}
-                {" "}“Productos<br className="md:hidden" /> {/* Mobile */}
+                {" "}metodología de<br /> {/* Quebra Universal */}
                 <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                  “Productos<br className="md:hidden"/> {/* Quebra Mobile dentro da Span */}
                   {" "}extranjeros virales”
                 </span>
               </p>
@@ -273,7 +273,7 @@ export default function Home() {
       {/* --- FIM DA NOVA SEÇÃO --- */}
 
 
-      {/* NOVA SEÇÃO: +140 Países (Substituindo Features Grid Section) */}
+      {/* NOVA SEÇÃO: +140 Países */}
       <section
         className="py-20 px-4 bg-black text-white bg-cover bg-center relative flex items-center min-h-[70vh]"
         style={{ backgroundImage: "url('/image/Slice-4-1.avif')" }}

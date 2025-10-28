@@ -92,28 +92,33 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section */}
+      {/* Hero Section - AJUSTES 2 e 3 APLICADOS */}
       <section className="relative min-h-screen flex items-start justify-center px-4 pt-10 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="space-y-6">
+            {/* Ajuste 3: Reduzido space-y para mobile (space-y-3), mantido para desktop (md:space-y-6) */}
+            <div className="space-y-3 md:space-y-6">
 
               <h1 className="text-xl md:text-3xl lg:text-4xl font-normal leading-snug text-balance font-serif italic underline">
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
 
+              {/* Ajuste 2: Quebras de linha e novo gradiente */}
               <p className="text-lg md:text-4xl text-white leading-relaxed">
-                Presentación revela cómo generar entre 100 a 500 dólares al día con la metodología de
-                <span className="font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+                Presentación revela cómo generar entre 100 a <br />
+                500 dólares al día con la metodología de <br />
+                <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                   {" "}“Productos extranjeros virales”
                 </span>
               </p>
 
-              <p className="text-base md:text-2xl text-gray-300 mt-3">
+              {/* Ajuste 3: Removido mt-3 para usar space-y do pai */}
+              <p className="text-base md:text-2xl text-gray-300">
                 (Cualquier persona puede ganar dinero en menos de 7 días... te pruebo cómo)
               </p>
 
-              <div className="mt-3 pt-4 space-y-2">
+              {/* Ajuste 3: Removido mt-3, padding responsivo pt-4 md:pt-8 */}
+              <div className="pt-4 md:pt-8 space-y-2">
                 <p className="text-sm font-bold tracking-wider uppercase">
                   ¡DALE CLICK ABAJO!
                 </p>
@@ -137,11 +142,11 @@ export default function Home() {
       {/* FIM DA SEÇÃO HERO */}
 
 
-      {/* PINTA, dibuja online Section - AJUSTES DE FONTE E QUEBRA APLICADOS */}
+      {/* PINTA, dibuja online Section - AJUSTE 1 APLICADO */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          {/* Ajuste: Mobile text-2xl, Desktop text-[48px]. Quebras de linha condicionais */}
-          <h2 className="text-2xl leading-tight md:text-[48px] md:leading-snug font-bold text-center mb-4">
+          {/* Ajuste 1: Adicionado mb-12 para espaçamento inferior */}
+          <h2 className="text-2xl leading-tight md:text-[48px] md:leading-snug font-bold text-center mb-12">
             PDTA: ¿Si un niño de 13{/* Quebra Mobile */}
             <br className="md:hidden" /> años{/* Quebra Desktop */}
             <br className="hidden md:inline" /> pudo,{" "}

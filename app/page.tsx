@@ -161,7 +161,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SEÇÃO "DOS OPCIONES" --- */}
+      {/* --- SEÇÃO "DOS OPCIONES" (IMAGENS ADICIONADAS) --- */}
       <section className="py-20 px-4 bg-black text-white">
         <div className="container mx-auto max-w-6xl">
 
@@ -184,9 +184,12 @@ export default function Home() {
                 {" "}Continuar con una vida sin Activos extranjeros virales....
               </h3>
               
-              <div className="w-full max-w-xs mx-auto aspect-[9/16] bg-muted/20 rounded-2xl border border-gray-700 flex items-center justify-center">
-                <p className="text-muted-foreground text-sm p-4">Imagem Opção 1 (Sem Vendas)</p>
-              </div>
+              {/* IMAGEM 1 ADICIONADA */}
+              <img
+                src="/image/Celularsinventas.webp"
+                alt="Opção 1 - Celular sem vendas"
+                className="w-full max-w-xs mx-auto rounded-2xl"
+              />
             </div>
 
             {/* Coluna 2: Opção #2 */}
@@ -196,9 +199,12 @@ export default function Home() {
                 {" "}Vivir de los Activos extranjeros virales
               </h3>
               
-              <div className="w-full max-w-xs mx-auto aspect-[9/16] bg-muted/20 rounded-2xl border border-gray-700 flex items-center justify-center">
-                <p className="text-muted-foreground text-sm p-4">Imagem Opção 2 (Com Vendas)</p>
-              </div>
+              {/* IMAGEM 2 ADICIONADA */}
+              <img
+                src="/image/ahorasi.webp"
+                alt="Opção 2 - Celular com vendas"
+                className="w-full max-w-xs mx-auto rounded-2xl"
+              />
             </div>
 
           </div>
@@ -473,7 +479,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer -- ERRO CORRIGIDO AQUI */}
+      {/* Footer */}
       <footer className="py-12 px-4 border-t border-border">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
@@ -481,7 +487,7 @@ export default function Home() {
               <h4 className="font-bold mb-4">Método AURA</h4>
               <p className="text-sm text-muted-foreground">
                 Transformando vidas através da educação e desenvolvimento pessoal.
-              </p> {/* <--- CORRIGIDO DE </Não> PARA </p> */}
+              </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Produto</h4>

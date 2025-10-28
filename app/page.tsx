@@ -216,13 +216,12 @@ export default function Home() {
       </section>
       {/* --- FIM DA SEÇÃO DOS OPCIONES --- */}
 
-      {/* --- SEÇÃO BACKGROUD IMAGE (OVERLAY REMOVIDO) --- */}
+      {/* --- SEÇÃO BACKGROUD IMAGE (TAMANHO DA FONTE DOS PARÁGRAFOS AJUSTADO) --- */}
       <section
         className="py-20 px-4 bg-black text-white bg-cover bg-center relative min-h-[70vh] flex items-center"
         style={{ backgroundImage: "url('/image/Slice-3-3.avif')" }}
       >
-        {/* A DIV DO OVERLAY ESCURO FOI REMOVIDA DAQUI */}
-
+        {/* Overlay removido */}
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div></div> {/* Coluna Esquerda Vazia */}
@@ -233,29 +232,29 @@ export default function Home() {
                 ¿Cómo se va a ver tu vida luego de tener tu propio <strong className="text-white">ACTIVO EXTRANJERO VIRAL?</strong>
               </h2>
 
-              {/* Bullet Point 1 */}
+              {/* Ajuste: text-lg -> text-base */}
               <div className="flex items-start gap-4">
                 <span className="text-purple-400 text-2xl mt-1">💲</span>
-                <p className="text-lg text-gray-200">
+                <p className="text-base text-gray-200"> {/* Tamanho da fonte reduzido */}
                   El primer día que saques tu ACTIVO extranjero es altamente{' '}
                   <strong className="text-white">PROBABLE QUE VENDA EN MENOS DE 5 HORAS</strong> - Recuerda: "{/* Aspas fora */}
                   <strong className="text-white">SON PRODUCTOS VIRALES</strong>{/* Aspas fora */} "
                 </p>
               </div>
 
-              {/* Bullet Point 2 */}
+              {/* Ajuste: text-lg -> text-base */}
               <div className="flex items-start gap-4">
                 <span className="text-purple-400 text-2xl mt-1">💸</span>
-                <p className="text-lg text-gray-200">
+                <p className="text-base text-gray-200"> {/* Tamanho da fonte reduzido */}
                   Nunca te va a faltar el dinero en tu mesa ya que aprenderás la habilidad de{' '}
                   <strong className="text-white">tener tu propio activo viral con AURA</strong>
                 </p>
               </div>
 
-              {/* Bullet Point 3 */}
+              {/* Ajuste: text-lg -> text-base */}
               <div className="flex items-start gap-4">
                  <span className="text-purple-400 text-2xl mt-1">🌍</span>
-                <p className="text-lg text-gray-200">
+                <p className="text-base text-gray-200"> {/* Tamanho da fonte reduzido */}
                   Podrás vender <strong className="text-white">a todo el mundo incluso sin saber otros idiomas</strong>. Lo que significa que podrás ganar lo mismo o más que empresarios de Estados Unidos, Europa y otras partes del mundo. (<strong className="text-white">Y lo mejor… sin visa.</strong>)
                 </p>
               </div>

@@ -276,55 +276,50 @@ export default function Home() {
       {/* --- FIM DA NOVA SEÇÃO --- */}
 
 
-      {/* Features Grid Section */}
-      <section className="py-20 px-4 bg-secondary/30">
-        <div className="container mx-auto max-w-6xl space-y-20">
-          {/* Feature 1 */}
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="aspect-video bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center">
-              <p className="text-muted-foreground">Imagem Feature 1</p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-2xl md:text-3xl font-bold">Crie sem limites</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
-              <Button>Explorar Recursos</Button>
+      {/* NOVA SEÇÃO: +140 Países (Substituindo Features Grid Section) */}
+      <section
+        className="py-20 px-4 bg-black text-white bg-cover bg-center relative flex items-center min-h-[70vh]"
+        style={{ backgroundImage: "url('/image/Slice-4-1.avif')" }}
+      >
+        <div className="container mx-auto max-w-6xl relative z-10 grid md:grid-cols-2 gap-12 items-center">
+          {/* Conteúdo à esquerda */}
+          <div className="space-y-8 text-center md:text-left">
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+              +140 Países
+            </h2>
+            <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+              Hemos vendido ACTIVOS <br className="md:hidden"/>
+              EXTRANJEROS en más de 140 <br className="md:hidden"/>
+              países y en más de 20 idiomas y <br className="md:hidden"/>
+              sabemos cómo enseñarte a hacerlo.
+            </p>
+
+            {/* Cards de Vendas */}
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-4">
+              <Card className="p-4 bg-gray-900/50 border border-gray-700 w-full sm:w-auto flex-shrink-0">
+                <p className="font-bold text-gray-300 mb-2">Ventas por País</p>
+                <p className="text-sm text-gray-400">Total: 149 registros</p>
+              </Card>
+              <Card className="p-4 bg-gray-900/50 border border-gray-700 w-full sm:w-auto">
+                <p className="font-bold text-gray-300 mb-2">Países con más Ventas <span className="text-red-500">🔥</span></p>
+                <ul className="text-sm text-gray-400 space-y-1">
+                  <li>1. Estados Unidos</li>
+                  <li>2. Canadá</li>
+                  <li>3. Reino Unido</li>
+                  <li>4. Alemania</li>
+                </ul>
+              </Card>
             </div>
           </div>
 
-          {/* Feature 2 */}
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-4 order-2 md:order-1">
-              <h3 className="text-2xl md:text-3xl font-bold">Compartilhe suas criações</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
-              <Button>Ver Galeria</Button>
-            </div>
-            <div className="aspect-video bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center order-1 md:order-2">
-              <p className="text-muted-foreground">Imagem Feature 2</p>
-            </div>
-          </div>
-
-          {/* Feature 3 */}
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="aspect-video bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center">
-              <p className="text-muted-foreground">Imagem Feature 3</p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-2xl md:text-3xl font-bold">Ferramentas profissionais</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
-              <Button>Conhecer Ferramentas</Button>
-            </div>
+          {/* O "mapa" é a imagem de fundo, não um elemento separado aqui */}
+          <div>
+            {/* Este div está vazio porque a imagem do mapa é o background da seção */}
           </div>
         </div>
       </section>
+      {/* FIM DA NOVA SEÇÃO: +140 Países */}
+
 
       {/* Testimonials Section */}
       <section className="py-20 px-4">

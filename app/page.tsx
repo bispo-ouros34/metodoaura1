@@ -92,8 +92,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - AJUSTES 1 e 2 APLICADOS */}
-      {/* Ajuste 1: pt-10 -> pt-16 (Padding Top 4rem) */}
+      {/* Hero Section - AJUSTES 1 e 2 APLICADOS (QUEBRAS MOBILE) */}
       <section className="relative min-h-screen flex items-start justify-center px-4 pt-16 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -103,18 +102,20 @@ export default function Home() {
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
 
-              {/* Ajuste 2: Adicionado md:leading-snug para desktop */}
+              {/* Ajuste 1: Novas quebras de linha APENAS para mobile */}
               <p className="text-lg md:text-4xl text-white leading-relaxed md:leading-snug">
                 Presentación revela cómo generar<br className="md:hidden" />
-                {" "}entre 100 a 500 dólares<br className="md:hidden" />
-                {" "}al día con la metodología de<br />
+                {" "}entre 100 a 500 dólares al día con la<br className="md:hidden" />
+                {" "}metodología de<br className="md:hidden" />
                 <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                   {" "}“Productos extranjeros virales”
                 </span>
               </p>
 
+              {/* Ajuste 2: Quebra de linha APENAS para mobile */}
               <p className="text-base md:text-2xl text-gray-300">
-                (Cualquier persona puede ganar dinero en menos de 7 días... te pruebo cómo)
+                (Cualquier persona puede ganar dinero<br className="md:hidden" />
+                {" "}en menos de 7 días... te pruebo cómo)
               </p>
 
               <div className="pt-4 md:pt-8">

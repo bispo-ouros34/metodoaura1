@@ -83,11 +83,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - PADDINGS ENTRE FRASES AJUSTADOS */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-start justify-center px-4 pt-10 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            {/* O space-y-6 define o padrão (1.5rem) */}
             <div className="space-y-6">
 
               <h1 className="text-xl md:text-3xl lg:text-4xl font-bold leading-snug text-balance font-serif italic underline">
@@ -101,12 +100,10 @@ export default function Home() {
                 </span>
               </p>
 
-              {/* AJUSTE 1: Padding reduzido pela metade (mt-3 = 0.75rem) */}
               <p className="text-base md:text-2xl text-gray-300 mt-3">
                 (Cualquier persona puede ganar dinero en menos de 7 días... te pruebo cómo)
               </p>
 
-              {/* AJUSTE 2: Padding reduzido pela metade (mt-3 + pt-4 = 1.75rem) */}
               <div className="mt-3 pt-4 space-y-2">
                 <p className="text-sm font-bold tracking-wider uppercase">
                   ¡DALE CLICK ABAJO!
@@ -128,7 +125,7 @@ export default function Home() {
 
         </div>
       </section>
-      {/* FIM DA SEÇÃO MODIFICADA */}
+      {/* FIM DA SEÇÃO HERO */}
 
 
       {/* PINTA, dibuja online Section */}
@@ -155,46 +152,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Para todos los géneros Section */}
-      <section className="py-20 px-4 bg-secondary/30">
+      {/* --- INÍCIO DA NOVA SEÇÃO (SUBSTITUIÇÃO) --- */}
+      {/* Esta seção substitui 'Para todos los géneros' */}
+      <section className="py-20 px-4 bg-black text-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Para todos los géneros...</h2>
 
-          <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-semibold">Funcionalidades Avançadas</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Ferramenta profissional de desenho</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Interface intuitiva e fácil de usar</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Compartilhe suas criações</span>
-                </li>
-              </ul>
+          {/* Título Principal */}
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            Ahora tienes <span className="underline">dos opciones</span>...
+          </h2>
+
+          {/* Grid de 2 Colunas */}
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-16 max-w-5xl mx-auto relative items-start">
+
+            {/* Ícone '?' no meio (apenas desktop) */}
+            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block z-20">
+              <div className="bg-white p-4 rounded-lg shadow-lg">
+                <span className="text-blue-600 font-bold text-2xl">?</span>
+              </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[1, 2, 3, 4].map((i) => (
-                <div
-                  key={i}
-                  className="aspect-square bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center"
-                >
-                  <p className="text-xs text-muted-foreground">Imagem {i}</p>
-                </div>
-              ))}
+
+            {/* Coluna 1: Opção #1 */}
+            <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6 text-center z-10">
+              <h3 className="text-xl font-bold mb-6">
+                <span className="text-red-400">Opción #1:</span> Continuar con una vida sin Activos extranjeros virales....
+              </h3>
+              {/* Placeholder para Imagem 1 */}
+              <div className="w-full max-w-xs mx-auto aspect-[9/16] bg-muted/20 rounded-2xl border border-gray-700 flex items-center justify-center">
+                <p className="text-muted-foreground text-sm p-4">Imagem Opção 1 (Sem Vendas)</p>
+              </div>
             </div>
+
+            {/* Coluna 2: Opção #2 */}
+            <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6 text-center z-10">
+              <h3 className="text-xl font-bold mb-6">
+                <span className="text-green-400">Opción #2:</span> Vivir de los Activos extranjeros virales
+              </h3>
+              {/* Placeholder para Imagem 2 */}
+              <div className="w-full max-w-xs mx-auto aspect-[9/16] bg-muted/20 rounded-2xl border border-gray-700 flex items-center justify-center">
+                <p className="text-muted-foreground text-sm p-4">Imagem Opção 2 (Com Vendas)</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
+      {/* --- FIM DA NOVA SEÇÃO --- */}
+
 
       {/* Planos Section */}
       <section className="py-20 px-4">

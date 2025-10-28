@@ -323,7 +323,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 3 -- BLOCO CORRIGIDO ANTERIORMENTE */}
+          {/* Feature 3 -- BLOCO CORRIGIDO */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="aspect-video bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center">
               <p className="text-muted-foreground">Imagem Feature 3</p>
@@ -402,7 +402,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section -- ERRO DE SINTAXE CORRIGIDO AQUI */}
+      {/* CTA Section -- ERRO CORRIGIDO AQUI */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-balance">
@@ -411,7 +411,7 @@ export default function Home() {
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Não perca mais tempo. Transforme sua vida agora mesmo.
           </p> 
-          {/* A LINHA ACIMA ESTAVA COM </s'p>, AGORA ESTÁ CORRETO COM </p> */}
+          {/* AQUI ESTAVA O ERRO </s'p>, AGORA ESTÁ CORRETO COM </p> */}
           <Button size="lg" className="text-lg px-12">
             Começar Agora
           </Button>

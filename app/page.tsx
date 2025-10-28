@@ -216,7 +216,7 @@ export default function Home() {
       </section>
       {/* --- FIM DA SEÇÃO DOS OPCIONES --- */}
 
-      {/* --- SEÇÃO BACKGROUD IMAGE (AJUSTES 1-4 APLICADOS) --- */}
+      {/* --- SEÇÃO BACKGROUD IMAGE (CORES CORRIGIDAS) --- */}
       <section
         className="py-20 px-4 bg-black text-white bg-cover bg-center relative min-h-[70vh] flex items-center"
         style={{ backgroundImage: "url('/image/Slice-3-3.avif')" }}
@@ -229,36 +229,35 @@ export default function Home() {
 
             {/* Coluna Direita (Conteúdo) */}
             <div className="space-y-8">
-              {/* Ajuste 1: Font Weight 700 (font-bold), Size 38px (text-[38px]), Line Height 46px (leading-[46px]) */}
               <h2 className="font-bold text-[38px] leading-[46px]">
                 ¿Cómo se va a ver tu vida luego de tener tu propio <br />
-                <strong className="text-white">ACTIVO EXTRANJERO VIRAL?</strong> {/* Garantindo que strong seja branco */}
+                <strong className="text-white">ACTIVO EXTRANJERO VIRAL?</strong>
               </h2>
 
-              {/* Bullet Point 1 - Ajuste 2: Cor branca padrão */}
+              {/* Bullet Point 1 - CORES CORRIGIDAS */}
               <div className="flex items-start gap-4">
                 <span className="text-purple-400 text-2xl mt-1">💲</span>
                 <p className="text-lg text-gray-200">
                   El primer día que saques tu ACTIVO extranjero es altamente{' '}
-                  <strong>PROBABLE QUE VENDA EN MENOS DE 5 HORAS</strong> - Recuerda: "{/* Aspas fora */}
-                  <strong>SON PRODUCTOS VIRALES</strong>{/* Aspas fora */} "
+                  <strong className="text-white">PROBABLE QUE VENDA EN MENOS DE 5 HORAS</strong> - Recuerda: "{/* Aspas fora */}
+                  <strong className="text-white">SON PRODUCTOS VIRALES</strong>{/* Aspas fora */} "
                 </p>
               </div>
 
-              {/* Bullet Point 2 - Ajuste 3: Cor branca padrão */}
+              {/* Bullet Point 2 - CORES CORRIGIDAS */}
               <div className="flex items-start gap-4">
                 <span className="text-purple-400 text-2xl mt-1">💸</span>
                 <p className="text-lg text-gray-200">
                   Nunca te va a faltar el dinero en tu mesa ya que aprenderás la habilidad de{' '}
-                  <strong>tener tu propio activo viral con AURA</strong>
+                  <strong className="text-white">tener tu propio activo viral con AURA</strong>
                 </p>
               </div>
 
-              {/* Bullet Point 3 - Ajuste 4: Cor branca padrão */}
+              {/* Bullet Point 3 - CORES CORRIGIDAS */}
               <div className="flex items-start gap-4">
                  <span className="text-purple-400 text-2xl mt-1">🌍</span>
                 <p className="text-lg text-gray-200">
-                  Podrás vender <strong>a todo el mundo incluso sin saber otros idiomas</strong>. Lo que significa que podrás ganar lo mismo o más que empresarios de Estados Unidos, Europa y otras partes del mundo. (<strong>Y lo mejor… sin visa.</strong>)
+                  Podrás vender <strong className="text-white">a todo el mundo incluso sin saber otros idiomas</strong>. Lo que significa que podrás ganar lo mismo o más que empresarios de Estados Unidos, Europa y otras partes del mundo. (<strong className="text-white">Y lo mejor… sin visa.</strong>)
                 </p>
               </div>
             </div>

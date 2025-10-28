@@ -137,10 +137,15 @@ export default function Home() {
       {/* FIM DA SEÇÃO HERO */}
 
 
-      {/* PINTA, dibuja online Section */}
+      {/* PINTA, dibuja online Section - GRADIENTE APLICADO AQUI */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">PDTA: ¿Si un niño de 13 años pudo, por qué tú no?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            PDTA: ¿Si un niño de 13 años pudo,{" "}
+            <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+              por qué tú no?
+            </span>
+          </h2>
 
           <div className="slider-container">
             <div className="image-slider" ref={sliderRef}>
@@ -161,7 +166,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SEÇÃO "DOS OPCIONES" (IMAGENS ADICIONADAS) --- */}
+      {/* --- SEÇÃO "DOS OPCIONES" --- */}
       <section className="py-20 px-4 bg-black text-white">
         <div className="container mx-auto max-w-6xl">
 
@@ -184,7 +189,6 @@ export default function Home() {
                 {" "}Continuar con una vida sin Activos extranjeros virales....
               </h3>
               
-              {/* IMAGEM 1 ADICIONADA */}
               <img
                 src="/image/Celularsinventas.webp"
                 alt="Opção 1 - Celular sem vendas"
@@ -199,7 +203,6 @@ export default function Home() {
                 {" "}Vivir de los Activos extranjeros virales
               </h3>
               
-              {/* IMAGEM 2 ADICIONADA */}
               <img
                 src="/image/ahorasi.webp"
                 alt="Opção 2 - Celular com vendas"

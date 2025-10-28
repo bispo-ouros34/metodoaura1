@@ -4,14 +4,31 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import React, { useEffect, useRef } from 'react'; // 2. Hooks importados
 
-// Importando a fonte Rethink Sans
+// Importando fontes
 import { Rethink_Sans } from 'next/font/google';
+import localFont from 'next/font/local'; // Importa o 'next/font/local'
 
-// Instanciando a fonte com o peso 400
+// Instanciando a fonte Rethink Sans
 const rethinkSans = Rethink_Sans({
   subsets: ['latin'],
-  weight: ['400'], // Peso 400 conforme solicitado
+  weight: ['400'],
 });
+
+// AJUSTE 2: Configuração da fonte local ivypresto-display
+// !!! VOCÊ PRECISA ADICIONAR O ARQUIVO DA FONTE EM /public/fonts/ !!!
+const ivypresto = localFont({
+  src: [
+    {
+      // O caminho para o seu arquivo de fonte. Mude se o nome for diferente.
+      path: '../../public/fonts/ivypresto-display-semibold.woff2', 
+      weight: '600', // Weight 600
+      style: 'normal',
+    },
+    // Adicione outros pesos/estilos se necessário
+  ],
+  display: 'swap',
+});
+
 
 export default function Home() {
   // Lógica e dados para o slider
@@ -103,7 +120,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg md:text-4xl text-white leading-relaxed">
-                Presentación revela cómo generar entre 100 a 500 dólares al día con la metodología de
+                Presentación revela cómo generar entre 100 a 500 dólares al dia con la metodología de
                 <span className="font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
                   {" "}“Productos extranjeros virales”
                 </span>
@@ -137,10 +154,11 @@ export default function Home() {
       {/* FIM DA SEÇÃO HERO */}
 
 
-      {/* PINTA, dibuja online Section */}
+      {/* PINTA, dibuja online Section - AJUSTE 1 APLICADO */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+          {/* AJUSTE 1: Fonte (Weight 700), Size 56px, Line Height 63px */}
+          <h2 className="text-[56px] leading-[63px] font-bold text-center mb-4">
             PDTA: ¿Si un niño de 13 años pudo,{" "}
             <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
               por qué tú no?
@@ -166,16 +184,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SEÇÃO "DOS OPCIONES" (AJUSTE DE ALTURA) --- */}
+      {/* --- SEÇÃO "DOS OPCIONES" - AJUSTE 2 APLICADO --- */}
       <section className="py-20 px-4 bg-black text-white">
         <div className="container mx-auto max-w-6xl">
 
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Ahora tienes <span className="underline">dos opciones</span>...
+          {/* AJUSTE 2: Fontes customizadas, Size 56px, Line Height 63px */}
+          <h2 className="text-[56px] leading-[63px] text-center mb-16">
+            {/* Parte A: Weight 400 (font-normal) */}
+            <span className="font-normal">Ahora tienes</span>{" "}
+            {/* Parte B: ivypresto-display, Weight 600 (font-semibold) */}
+            <span className={`${ivypresto.className} font-semibold`}>
+              <span className="underline">dos opciones</span>...
+            </span>
           </h2>
 
-          {/* AJUSTE: max-w-5xl -> max-w-6xl (Alarga o grid) */}
-          {/* AJUSTE: items-start -> items-stretch (Força colunas de mesma altura) */}
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16 max-w-6xl mx-auto relative items-stretch">
 
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block z-20">
@@ -185,7 +207,6 @@ export default function Home() {
             </div>
 
             {/* Coluna 1: Opção #1 */}
-            {/* AJUSTE: Adicionado 'h-full' para o card preencher a coluna */}
             <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6 text-center z-10 h-full">
               <h3 className={`text-[28px] leading-[34px] mb-6 ${rethinkSans.className}`}>
                 <span className="font-normal bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent">Opción #1:</span>
@@ -200,7 +221,6 @@ export default function Home() {
             </div>
 
             {/* Coluna 2: Opção #2 */}
-            {/* AJUSTE: Adicionado 'h-full' para o card preencher a coluna */}
             <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6 text-center z-10 h-full">
               <h3 className={`text-[28px] leading-[34px] mb-6 ${rethinkSans.className}`}>
                 <span className="font-normal bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">Opción #2:</span>

@@ -83,10 +83,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - PADDING SUPERIOR AJUSTADO */}
-      {/* pt-32 -> pt-10 */}
+      {/* Hero Section - PLACEHOLDER VTURB ADICIONADO */}
       <section className="relative min-h-screen flex items-start justify-center px-4 pt-10 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
+          {/* Centraliza o texto */}
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-6">
 
@@ -115,6 +115,22 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* --- NOVO ESPAÇO PARA O VÍDEO VTURB --- */}
+          {/* A Vturb pode pedir que você adicione um 'id' a este div, por exemplo: id="vturb-player" */}
+          <div className="max-w-4xl mx-auto mt-8">
+            <div className="w-full aspect-video bg-muted/20 rounded-lg border border-gray-700 flex items-center justify-center">
+              <p className="text-gray-400">Espaço reservado para o vídeo (Vturb)</p>
+            </div>
+          </div>
+
+          {/* =============================================================
+            COLE O SCRIPT DA VTURB AQUI ABAIXO
+            =============================================================
+          */}
+          {/* <script src="..."></script> */}
+          {/* --- FIM DO ESPAÇO VTURB --- */}
+
         </div>
       </section>
       {/* FIM DA SEÇÃO MODIFICADA */}

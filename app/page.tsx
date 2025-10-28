@@ -93,7 +93,8 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground">
 
       {/* Hero Section - AJUSTES 1 e 2 APLICADOS */}
-      <section className="relative min-h-screen flex items-start justify-center px-4 pt-10 pb-20 bg-black text-white">
+      {/* Ajuste 1: pt-10 -> pt-16 (Padding Top 4rem) */}
+      <section className="relative min-h-screen flex items-start justify-center px-4 pt-16 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-3 md:space-y-6">
@@ -102,12 +103,11 @@ export default function Home() {
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
 
-              {/* Ajuste 1: Quebras de linha específicas para mobile */}
-              <p className="text-lg md:text-4xl text-white leading-relaxed">
+              {/* Ajuste 2: Adicionado md:leading-snug para desktop */}
+              <p className="text-lg md:text-4xl text-white leading-relaxed md:leading-snug">
                 Presentación revela cómo generar<br className="md:hidden" />
                 {" "}entre 100 a 500 dólares<br className="md:hidden" />
-                {" "}al día con la metodología de{/* Quebra removida daqui para desktop */}
-                <br /> {/* Quebra para mobile e desktop */}
+                {" "}al día con la metodología de<br />
                 <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                   {" "}“Productos extranjeros virales”
                 </span>
@@ -117,7 +117,6 @@ export default function Home() {
                 (Cualquier persona puede ganar dinero en menos de 7 días... te pruebo cómo)
               </p>
 
-              {/* Ajuste 2: Removido space-y-2 */}
               <div className="pt-4 md:pt-8">
                 <p className="text-sm font-bold tracking-wider uppercase">
                   ¡DALE CLICK ABAJO!

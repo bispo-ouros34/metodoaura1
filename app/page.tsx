@@ -83,26 +83,26 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - TAMANHOS MOBILE REDUZIDOS */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-black text-white">
+      {/* Hero Section - AJUSTES 1, 2, 3 E 4 APLICADOS */}
+      {/* AJUSTE 4: 'items-center py-20' -> 'items-start pt-32 pb-20' (remove espaço superior) */}
+      <section className="relative min-h-screen flex items-start justify-center px-4 pt-32 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-6">
 
-              {/* AJUSTE 1 (Mobile): text-2xl -> text-xl */}
               <h1 className="text-xl md:text-3xl lg:text-4xl font-bold leading-snug text-balance font-serif italic underline">
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
 
-              {/* AJUSTE 2 (Mobile): text-3xl -> text-lg */}
-              <p className="text-lg md:text-4xl text-gray-200 leading-relaxed">
+              {/* AJUSTE 1: (Cor) text-gray-200 -> text-white */}
+              <p className="text-lg md:text-4xl text-white leading-relaxed">
                 Presentación revela cómo generar entre 100 a 500 dólares al día con la metodología de
-                <span className="font-bold text-purple-400">
+                {/* AJUSTE 2: (Gradiente) Aplicado roxo/azul */}
+                <span className="font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
                   {" "}“Productos extranjeros virales”
                 </span>
               </p>
 
-              {/* AJUSTE 3 (Mobile): text-xl -> text-base */}
               <p className="text-base md:text-2xl text-gray-300">
                 (Cualquier persona puede ganar dinero en menos de 7 días... te pruebo cómo)
               </p>
@@ -111,8 +111,9 @@ export default function Home() {
                 <p className="text-sm font-bold tracking-wider uppercase">
                   ¡DALE CLICK ABAJO!
                 </p>
-                <p className="text-xs text-gray-400">
-                  (El video inicia en um momento)
+                {/* AJUSTE 3: (Tamanho) text-xs -> text-base (e typo 'um' -> 'un') */}
+                <p className="text-base text-gray-400">
+                  (El video inicia en un momento)
                 </p>
               </div>
             </div>
@@ -321,7 +322,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 3 -- BLOCO CORRIGIDO */}
+          {/* Feature 3 */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="aspect-video bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center">
               <p className="text-muted-foreground">Imagem Feature 3</p>
@@ -335,8 +336,6 @@ export default function Home() {
               <Button>Conhecer Ferramentas</Button>
             </div>
           </div>
-          {/* FIM DO BLOCO CORRIGIDO */}
-
         </div>
       </section>
 
@@ -400,7 +399,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section -- ERRO CORRIGIDO AQUI */}
+      {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-balance">
@@ -414,8 +413,6 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      {/* FIM DA SEÇÃO CORRIGIDA */}
-
 
       {/* Final Image Grid */}
       <section className="py-20 px-4 bg-secondary/30">

@@ -216,7 +216,7 @@ export default function Home() {
       </section>
       {/* --- FIM DA SEÇÃO DOS OPCIONES --- */}
 
-      {/* --- SEÇÃO BACKGROUD IMAGE (AJUSTE DE QUEBRA DE LINHA) --- */}
+      {/* --- SEÇÃO BACKGROUD IMAGE (TAMANHO DA FONTE AJUSTADO) --- */}
       <section
         className="py-20 px-4 bg-black text-white bg-cover bg-center relative min-h-[70vh] flex items-center"
         style={{ backgroundImage: "url('/image/Slice-3-3.avif')" }}
@@ -229,11 +229,9 @@ export default function Home() {
 
             {/* Coluna Direita (Conteúdo) */}
             <div className="space-y-8">
-              {/* Ajuste: <br /> adicionados para forçar 3 linhas */}
-              <h2 className="font-bold text-[38px] leading-[46px]">
-                ¿Cómo se va a ver tu vida<br />
-                luego de tener tu propio<br />
-                <strong className="text-white">ACTIVO EXTRANJERO VIRAL?</strong>
+              {/* Ajuste: Tamanho reduzido para text-2xl/md:text-3xl, leading-tight, <br /> removidos */}
+              <h2 className="font-bold text-2xl md:text-3xl leading-tight">
+                ¿Cómo se va a ver tu vida luego de tener tu propio <strong className="text-white">ACTIVO EXTRANJERO VIRAL?</strong>
               </h2>
 
               {/* Bullet Point 1 */}

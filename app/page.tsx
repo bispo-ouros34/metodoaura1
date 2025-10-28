@@ -216,7 +216,7 @@ export default function Home() {
       </section>
       {/* --- FIM DA SEÇÃO DOS OPCIONES --- */}
 
-      {/* --- SEÇÃO BACKGROUD IMAGE (CORES CORRIGIDAS) --- */}
+      {/* --- SEÇÃO BACKGROUD IMAGE (AJUSTE DE QUEBRA DE LINHA) --- */}
       <section
         className="py-20 px-4 bg-black text-white bg-cover bg-center relative min-h-[70vh] flex items-center"
         style={{ backgroundImage: "url('/image/Slice-3-3.avif')" }}
@@ -229,12 +229,14 @@ export default function Home() {
 
             {/* Coluna Direita (Conteúdo) */}
             <div className="space-y-8">
+              {/* Ajuste: <br /> adicionados para forçar 3 linhas */}
               <h2 className="font-bold text-[38px] leading-[46px]">
-                ¿Cómo se va a ver tu vida luego de tener tu propio <br />
+                ¿Cómo se va a ver tu vida<br />
+                luego de tener tu propio<br />
                 <strong className="text-white">ACTIVO EXTRANJERO VIRAL?</strong>
               </h2>
 
-              {/* Bullet Point 1 - CORES CORRIGIDAS */}
+              {/* Bullet Point 1 */}
               <div className="flex items-start gap-4">
                 <span className="text-purple-400 text-2xl mt-1">💲</span>
                 <p className="text-lg text-gray-200">
@@ -244,7 +246,7 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Bullet Point 2 - CORES CORRIGIDAS */}
+              {/* Bullet Point 2 */}
               <div className="flex items-start gap-4">
                 <span className="text-purple-400 text-2xl mt-1">💸</span>
                 <p className="text-lg text-gray-200">
@@ -253,7 +255,7 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Bullet Point 3 - CORES CORRIGIDAS */}
+              {/* Bullet Point 3 */}
               <div className="flex items-start gap-4">
                  <span className="text-purple-400 text-2xl mt-1">🌍</span>
                 <p className="text-lg text-gray-200">

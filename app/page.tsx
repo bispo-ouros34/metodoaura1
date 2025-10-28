@@ -214,51 +214,51 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* --- FIM DA SEÇÃO MODIFICADA --- */}
+      {/* --- FIM DA SEÇÃO DOS OPCIONES --- */}
 
-      {/* --- INÍCIO DA NOVA SEÇÃO (SUBSTITUIÇÃO DOS PLANOS) --- */}
+      {/* --- SEÇÃO BACKGROUD IMAGE (AJUSTES 1-4 APLICADOS) --- */}
       <section
-        className="py-20 px-4 bg-black text-white bg-cover bg-center relative min-h-[70vh] flex items-center" // Ajuste min-h-[...] conforme necessário
+        className="py-20 px-4 bg-black text-white bg-cover bg-center relative min-h-[70vh] flex items-center"
         style={{ backgroundImage: "url('/image/Slice-3-3.avif')" }}
       >
-        {/* Overlay escuro para legibilidade */}
         <div className="absolute inset-0 bg-black/60 z-0"></div>
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            {/* Coluna Esquerda (vazia para mostrar background) */}
-            <div></div>
+            <div></div> {/* Coluna Esquerda Vazia */}
 
             {/* Coluna Direita (Conteúdo) */}
             <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              {/* Ajuste 1: Font Weight 700 (font-bold), Size 38px (text-[38px]), Line Height 46px (leading-[46px]) */}
+              <h2 className="font-bold text-[38px] leading-[46px]">
                 ¿Cómo se va a ver tu vida luego de tener tu propio <br />
-                <strong>ACTIVO EXTRANJERO VIRAL?</strong>
+                <strong className="text-white">ACTIVO EXTRANJERO VIRAL?</strong> {/* Garantindo que strong seja branco */}
               </h2>
 
-              {/* Bullet Point 1 */}
+              {/* Bullet Point 1 - Ajuste 2: Cor branca padrão */}
               <div className="flex items-start gap-4">
-                <span className="text-purple-400 text-2xl mt-1">💲</span> {/* Icone Placeholder */}
+                <span className="text-purple-400 text-2xl mt-1">💲</span>
                 <p className="text-lg text-gray-200">
                   El primer día que saques tu ACTIVO extranjero es altamente{' '}
-                  <strong>PROBABLE QUE VENDA EN MENOS DE 5 HORAS</strong> - Recuerda: "<strong>SON PRODUCTOS VIRALES</strong>"
+                  <strong>PROBABLE QUE VENDA EN MENOS DE 5 HORAS</strong> - Recuerda: "{/* Aspas fora */}
+                  <strong>SON PRODUCTOS VIRALES</strong>{/* Aspas fora */} "
                 </p>
               </div>
 
-              {/* Bullet Point 2 */}
+              {/* Bullet Point 2 - Ajuste 3: Cor branca padrão */}
               <div className="flex items-start gap-4">
-                <span className="text-purple-400 text-2xl mt-1">💸</span> {/* Icone Placeholder */}
+                <span className="text-purple-400 text-2xl mt-1">💸</span>
                 <p className="text-lg text-gray-200">
                   Nunca te va a faltar el dinero en tu mesa ya que aprenderás la habilidad de{' '}
                   <strong>tener tu propio activo viral con AURA</strong>
                 </p>
               </div>
 
-              {/* Bullet Point 3 */}
+              {/* Bullet Point 3 - Ajuste 4: Cor branca padrão */}
               <div className="flex items-start gap-4">
-                 <span className="text-purple-400 text-2xl mt-1">🌍</span> {/* Icone Placeholder */}
+                 <span className="text-purple-400 text-2xl mt-1">🌍</span>
                 <p className="text-lg text-gray-200">
-                  Podrás vender a <strong>todo el mundo incluso sin saber otros idiomas</strong>. Lo que significa que podrás ganar lo mismo o más que empresarios de Estados Unidos, Europa y otras partes del mundo. (<strong>Y lo mejor... sin visa.</strong>)
+                  Podrás vender <strong>a todo el mundo incluso sin saber otros idiomas</strong>. Lo que significa que podrás ganar lo mismo o más que empresarios de Estados Unidos, Europa y otras partes del mundo. (<strong>Y lo mejor… sin visa.</strong>)
                 </p>
               </div>
             </div>

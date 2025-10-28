@@ -4,6 +4,15 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import React, { useEffect, useRef } from 'react'; // 2. Hooks importados
 
+// AJUSTE 3: Importando a fonte Rethink Sans
+import { Rethink_Sans } from 'next/font/google';
+
+// AJUSTE 3: Instanciando a fonte com o peso 400
+const rethinkSans = Rethink_Sans({
+  subsets: ['latin'],
+  weight: ['400'], // Peso 400 conforme solicitado
+});
+
 export default function Home() {
   // Lógica e dados para o slider
   const sliderRef = useRef(null);
@@ -24,7 +33,7 @@ export default function Home() {
     "IMG_2277-12_1x.webp",
   ];
 
-  // 3. Lógica do slider (useEffect) integrada ao componente Home
+  // Lógica do slider (useEffect)
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider || imageFiles.length === 0) return;
@@ -72,7 +81,7 @@ export default function Home() {
 
     return () => {
       stopAutoPlay();
-      if (slider) { // Adiciona verificação se slider existe no cleanup
+      if (slider) {
         slider.removeEventListener('mouseenter', stopAutoPlay);
         slider.removeEventListener('mouseleave', startAutoPlay);
       }
@@ -152,21 +161,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- INÍCIO DA NOVA SEÇÃO (SUBSTITUIÇÃO) --- */}
-      {/* Esta seção substitui 'Para todos los géneros' */}
+      {/* --- SEÇÃO "DOS OPCIONES" (AJUSTES 1-5 APLICADOS) --- */}
       <section className="py-20 px-4 bg-black text-white">
         <div className="container mx-auto max-w-6xl">
 
-          {/* Título Principal */}
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             Ahora tienes <span className="underline">dos opciones</span>...
           </h2>
 
-          {/* Grid de 2 Colunas */}
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16 max-w-5xl mx-auto relative items-start">
 
-            {/* Ícone '?' no meio (apenas desktop) */}
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block z-20">
+            {/* AJUSTE 2: Ícone '?' centralizado (top-1/4 -> top-1/2) */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block z-20">
               <div className="bg-white p-4 rounded-lg shadow-lg">
                 <span className="text-blue-600 font-bold text-2xl">?</span>
               </div>
@@ -174,10 +180,12 @@ export default function Home() {
 
             {/* Coluna 1: Opção #1 */}
             <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6 text-center z-10">
-              <h3 className="text-xl font-bold mb-6">
-                <span className="text-red-400">Opción #1:</span> Continuar con una vida sin Activos extranjeros virales....
+              {/* AJUSTES 1, 3, 4: Fonte, Tamanho, Negrito removido, Gradiente */}
+              <h3 className={`text-[28px] leading-[34px] mb-6 ${rethinkSans.className}`}>
+                <span className="font-normal bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent">Opción #1:</span>
+                {" "}Continuar con una vida sin Activos extranjeros virales....
               </h3>
-              {/* Placeholder para Imagem 1 */}
+              
               <div className="w-full max-w-xs mx-auto aspect-[9/16] bg-muted/20 rounded-2xl border border-gray-700 flex items-center justify-center">
                 <p className="text-muted-foreground text-sm p-4">Imagem Opção 1 (Sem Vendas)</p>
               </div>
@@ -185,10 +193,12 @@ export default function Home() {
 
             {/* Coluna 2: Opção #2 */}
             <div className="bg-gray-900/50 border border-gray-700 rounded-2xl p-6 text-center z-10">
-              <h3 className="text-xl font-bold mb-6">
-                <span className="text-green-400">Opción #2:</span> Vivir de los Activos extranjeros virales
+              {/* AJUSTES 1, 3, 5: Fonte, Tamanho, Negrito removido, Gradiente */}
+              <h3 className={`text-[28px] leading-[34px] mb-6 ${rethinkSans.className}`}>
+                <span className="font-normal bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">Opción #2:</span>
+                {" "}Vivir de los Activos extranjeros virales
               </h3>
-              {/* Placeholder para Imagem 2 */}
+              
               <div className="w-full max-w-xs mx-auto aspect-[9/16] bg-muted/20 rounded-2xl border border-gray-700 flex items-center justify-center">
                 <p className="text-muted-foreground text-sm p-4">Imagem Opção 2 (Com Vendas)</p>
               </div>
@@ -197,7 +207,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* --- FIM DA NOVA SEÇÃO --- */}
+      {/* --- FIM DA SEÇÃO MODIFICADA --- */}
 
 
       {/* Planos Section */}
@@ -474,7 +484,7 @@ export default function Home() {
               <h4 className="font-bold mb-4">Método AURA</h4>
               <p className="text-sm text-muted-foreground">
                 Transformando vidas através da educação e desenvolvimento pessoal.
-              </p>
+              </Não>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Produto</h4>

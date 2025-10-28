@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - CORREÇÃO FINAL DE QUEBRAS E GRADIENTE */}
+      {/* Hero Section - CORREÇÃO FINALÍSSIMA DE QUEBRAS E GRADIENTE */}
       <section className="relative min-h-screen flex items-start justify-center px-4 pt-16 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -104,15 +104,17 @@ export default function Home() {
 
               {/* CORREÇÃO APLICADA AQUI */}
               <p className="text-lg md:text-4xl text-white md:leading-snug">
-                Presentación revela cómo generar<span className="md:hidden"></span>{" "} {/* Quebra mobile após "generar" */}
-                entre 100 a<br className="hidden md:inline" />{" "} {/* Quebra desktop após "100 a" */}
-                500 dólares al día con la<span className="md:hidden"></span>{" "} {/* Quebra mobile após "la" */}
-                metodología de<br className="hidden md:inline" />{" "} {/* Quebra desktop após "de" */}
+                Presentación revela cómo generar<br className="md:hidden" /> {/* Mobile Break 1 */}
+                {" "}entre 100 a<br className="hidden md:inline" /> {/* Desktop Break 1 */}
+                {" "}500 dólares al día con la<br className="md:hidden" /> {/* Mobile Break 2 */}
+                {" "}metodología de<br className="hidden md:inline" /> {/* Desktop Break 2 */}
+                {" "}
                 <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                  “Productos<span className="md:hidden"></span>{" "} {/* Quebra mobile após "Productos" */}
-                  extranjeros virales”
+                  “Productos<br className="md:hidden"/> {/* Mobile Break 3 */}
+                  {" "}extranjeros virales”
                 </span>
               </p>
+
 
               <p className="text-base md:text-2xl text-gray-300">
                 (Cualquier persona puede ganar dinero<br className="md:hidden" />

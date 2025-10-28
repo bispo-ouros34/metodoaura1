@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - AJUSTES DE QUEBRA E ESPAÇAMENTO MOBILE */}
+      {/* Hero Section - CORREÇÃO DO GRADIENTE E QUEBRAS PARA ATENDER AMBOS OS LAYOUTS */}
       <section className="relative min-h-screen flex items-start justify-center px-4 pt-16 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -102,15 +102,15 @@ export default function Home() {
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
 
-              {/* Ajuste: Quebras mobile e line-height mobile (removido leading-tight) */}
-              <p className="text-lg md:text-4xl text-white md:leading-snug"> {/* Removido leading-tight */}
-                Presentación revela cómo generar<br className="md:hidden" /> {/* Mobile Break 1 */}
-                {" "}entre 100 a<br className="hidden md:inline" /> {/* Desktop Break 1 */}
-                {" "}500 dólares al día con la<br className="md:hidden" /> {/* Mobile Break 2 */}
-                {" "}metodología de<br className="hidden md:inline" /> {/* Desktop Break 2 */}
-                {" "}“Productos<br className="md:hidden" /> {/* Mobile Break 3 */}
+              {/* CORREÇÃO APLICADA AQUI: Quebras e gradiente. */}
+              <p className="text-lg md:text-4xl text-white md:leading-snug">
+                Presentación revela cómo generar<br className="md:hidden" /> {/* Mobile: Quebra após "generar" */}
+                entre 100 a<br className="hidden md:inline" /> {/* Desktop: Quebra após "100 a" */}
+                500 dólares al día con la<br className="md:hidden" /> {/* Mobile: Quebra após "la" */}
+                metodología de{" "}
                 <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                  {" "}extranjeros virales”
+                  “Productos<br className="md:hidden" /> {/* Mobile: Quebra após "Productos" */}
+                  extranjeros virales”
                 </span>
               </p>
 

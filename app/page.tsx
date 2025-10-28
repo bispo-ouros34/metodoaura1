@@ -92,13 +92,12 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - AJUSTE 2 APLICADO */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-start justify-center px-4 pt-10 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-6">
 
-              {/* Ajuste 2: Font Weight 400 (font-normal) */}
               <h1 className="text-xl md:text-3xl lg:text-4xl font-normal leading-snug text-balance font-serif italic underline">
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
@@ -138,12 +137,9 @@ export default function Home() {
       {/* FIM DA SEÇÃO HERO */}
 
 
-      {/* PINTA, dibuja online Section - AJUSTE 3 APLICADO */}
+      {/* PINTA, dibuja online Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          {/* Ajuste 3: Tamanho da fonte responsivo para mobile e desktop */}
-          {/* Por padrão, o Tailwind é mobile-first. text-3xl será o padrão para mobile. */}
-          {/* md:text-[56px] md:leading-[63px] aplicará 56px de tamanho e 63px de line-height apenas em telas médias e maiores. */}
           <h2 className="text-3xl leading-tight md:text-[56px] md:leading-[63px] font-bold text-center mb-4">
             PDTA: ¿Si un niño de 13 años pudo,{" "}
             <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
@@ -170,11 +166,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SEÇÃO "DOS OPCIONES" - AJUSTE 1 APLICADO --- */}
+      {/* --- SEÇÃO "DOS OPCIONES" --- */}
       <section className="py-20 px-4 bg-black text-white">
         <div className="container mx-auto max-w-6xl">
 
-          {/* Ajuste 1: Font Weight 400 (font-normal) para "dos opciones..." */}
           <h2 className="text-[56px] leading-[63px] text-center mb-16">
             <span className="font-normal">Ahora tienes</span>{" "}
             <span className="font-serif italic font-normal underline">dos opciones...</span>
@@ -221,106 +216,57 @@ export default function Home() {
       </section>
       {/* --- FIM DA SEÇÃO MODIFICADA --- */}
 
+      {/* --- INÍCIO DA NOVA SEÇÃO (SUBSTITUIÇÃO DOS PLANOS) --- */}
+      <section
+        className="py-20 px-4 bg-black text-white bg-cover bg-center relative min-h-[70vh] flex items-center" // Ajuste min-h-[...] conforme necessário
+        style={{ backgroundImage: "url('/image/Slice-3-3.avif')" }}
+      >
+        {/* Overlay escuro para legibilidade */}
+        <div className="absolute inset-0 bg-black/60 z-0"></div>
 
-      {/* Planos Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">+ 540 Planos</h2>
-            <p className="text-muted-foreground text-lg">Escolha o plano perfeito para você</p>
-          </div>
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Coluna Esquerda (vazia para mostrar background) */}
+            <div></div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {/* Plano Básico */}
-            <Card className="p-6 bg-card border-border">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">Básico</h3>
-                <div className="text-4xl font-bold">Grátis</div>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
-                    <span className="text-sm">Acesso básico</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
-                    <span className="text-sm">Ferramentas essenciais</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
-                    <span className="text-sm">Suporte por email</span>
-                  </li>
-                </ul>
-                <Button className="w-full bg-transparent" variant="outline">
-                  Começar Grátis
-                </Button>
-              </div>
-            </Card>
+            {/* Coluna Direita (Conteúdo) */}
+            <div className="space-y-8">
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                ¿Cómo se va a ver tu vida luego de tener tu propio <br />
+                <strong>ACTIVO EXTRANJERO VIRAL?</strong>
+              </h2>
 
-            {/* Plano Premium */}
-            <Card className="p-6 bg-primary/10 border-primary relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                Popular
+              {/* Bullet Point 1 */}
+              <div className="flex items-start gap-4">
+                <span className="text-purple-400 text-2xl mt-1">💲</span> {/* Icone Placeholder */}
+                <p className="text-lg text-gray-200">
+                  El primer día que saques tu ACTIVO extranjero es altamente{' '}
+                  <strong>PROBABLE QUE VENDA EN MENOS DE 5 HORAS</strong> - Recuerda: "<strong>SON PRODUCTOS VIRALES</strong>"
+                </p>
               </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">Premium</h3>
-                <div className="text-4xl font-bold">
-                  R$7 <span className="text-lg font-normal text-muted-foreground">USD</span>
-                </div>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
-                    <span className="text-sm">Tudo do Básico</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
-                    <span className="text-sm">Ferramentas avançadas</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
-                    <span className="text-sm">Suporte prioritário</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
-                    <span className="text-sm">Sem anúncios</span>
-                  </li>
-                </ul>
-                <Button className="w-full">Assinar Agora</Button>
-              </div>
-            </Card>
 
-            {/* Plano Pro */}
-            <Card className="p-6 bg-card border-border">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">Pro</h3>
-                <div className="text-4xl font-bold">
-                  R$15 <span className="text-lg font-normal text-muted-foreground">USD</span>
-                </div>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
-                    <span className="text-sm">Tudo do Premium</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
-                    <span className="text-sm">Recursos ilimitados</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
-                    <span className="text-sm">Suporte 24/7</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
-                    <span className="text-sm">API access</span>
-                  </li>
-                </ul>
-                <Button className="w-full bg-transparent" variant="outline">
-                  Falar com Vendas
-                </Button>
+              {/* Bullet Point 2 */}
+              <div className="flex items-start gap-4">
+                <span className="text-purple-400 text-2xl mt-1">💸</span> {/* Icone Placeholder */}
+                <p className="text-lg text-gray-200">
+                  Nunca te va a faltar el dinero en tu mesa ya que aprenderás la habilidad de{' '}
+                  <strong>tener tu propio activo viral con AURA</strong>
+                </p>
               </div>
-            </Card>
+
+              {/* Bullet Point 3 */}
+              <div className="flex items-start gap-4">
+                 <span className="text-purple-400 text-2xl mt-1">🌍</span> {/* Icone Placeholder */}
+                <p className="text-lg text-gray-200">
+                  Podrás vender a <strong>todo el mundo incluso sin saber otros idiomas</strong>. Lo que significa que podrás ganar lo mismo o más que empresarios de Estados Unidos, Europa y otras partes del mundo. (<strong>Y lo mejor... sin visa.</strong>)
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      {/* --- FIM DA NOVA SEÇÃO --- */}
+
 
       {/* Features Grid Section */}
       <section className="py-20 px-4 bg-secondary/30">

@@ -11,7 +11,7 @@ export default function Home() {
     "IMG_2277-11_1x.webp",
     "IMG_2277-25_1x.webp",
     "IMG_2278-1.webp",
-    "IMG_2277-1_1x.webp",
+    "IMG_2277-1_x.webp",
     "IMG_2277-2_1x.webp",
     "IMG_2277-3_1x-1.webp",
     "IMG_2277-4_1x.webp",
@@ -83,29 +83,27 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - FONTES AJUSTADAS (MOBILE E DESKTOP) */}
+      {/* Hero Section - AJUSTES 1, 2 e 3 APLICADOS */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-6">
 
-              {/* <h1> - Tamanhos de fonte (mobile/desktop) e peso ajustados */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-snug text-balance font-serif italic underline">
+              {/* AJUSTE 1: Metade do tamanho, font-bold em vez de font-black */}
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug text-balance font-serif italic underline">
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
 
-              {/* <p> - Tamanho de fonte ajustado */}
-              <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
+              {/* AJUSTE 2: Mesmo tamanho, mesma linha */}
+              <p className="text-3xl md:text-4xl text-gray-200 leading-relaxed">
                 Presentación revela cómo generar entre 100 a 500 dólares al día con la metodología de
-
-                {/* <span> - Cor trocada para Roxo Sólido e tamanho ajustado */}
-                <span className="block font-bold text-3xl md:text-4xl mt-2 text-purple-400">
-                  “Productos extranjeros virales”
+                <span className="font-bold text-purple-400">
+                  {" "}“Productos extranjeros virales”
                 </span>
               </p>
 
-              {/* <p> - Tamanho de fonte ajustado */}
-              <p className="text-lg md:text-xl text-gray-300">
+              {/* AJUSTE 3: Levemente maior */}
+              <p className="text-xl md:text-2xl text-gray-300">
                 (Cualquier persona puede ganar dinero en menos de 7 días... te pruebo cómo)
               </p>
 
@@ -410,8 +408,7 @@ export default function Home() {
           </h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Não perca mais tempo. Transforme sua vida agora mesmo.
-          </p> 
-          {/* AQUI ESTAVA O ERRO </s'p>, AGORA ESTÁ CORRETO COM </p> */}
+          </p>
           <Button size="lg" className="text-lg px-12">
             Começar Agora
           </Button>

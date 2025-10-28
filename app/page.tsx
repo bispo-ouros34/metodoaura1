@@ -216,12 +216,12 @@ export default function Home() {
       </section>
       {/* --- FIM DA SEÇÃO DOS OPCIONES --- */}
 
-      {/* --- SEÇÃO BACKGROUD IMAGE (TAMANHO DA FONTE AJUSTADO) --- */}
+      {/* --- SEÇÃO BACKGROUD IMAGE (OVERLAY REMOVIDO) --- */}
       <section
         className="py-20 px-4 bg-black text-white bg-cover bg-center relative min-h-[70vh] flex items-center"
         style={{ backgroundImage: "url('/image/Slice-3-3.avif')" }}
       >
-        <div className="absolute inset-0 bg-black/60 z-0"></div>
+        {/* A DIV DO OVERLAY ESCURO FOI REMOVIDA DAQUI */}
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -229,7 +229,6 @@ export default function Home() {
 
             {/* Coluna Direita (Conteúdo) */}
             <div className="space-y-8">
-              {/* Ajuste: Tamanho reduzido para text-2xl/md:text-3xl, leading-tight, <br /> removidos */}
               <h2 className="font-bold text-2xl md:text-3xl leading-tight">
                 ¿Cómo se va a ver tu vida luego de tener tu propio <strong className="text-white">ACTIVO EXTRANJERO VIRAL?</strong>
               </h2>

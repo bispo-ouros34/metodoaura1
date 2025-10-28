@@ -92,13 +92,14 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section */}
+      {/* Hero Section - AJUSTE 2 APLICADO */}
       <section className="relative min-h-screen flex items-start justify-center px-4 pt-10 pb-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-6">
 
-              <h1 className="text-xl md:text-3xl lg:text-4xl font-bold leading-snug text-balance font-serif italic underline">
+              {/* Ajuste 2: Font Weight 400 (font-normal) */}
+              <h1 className="text-xl md:text-3xl lg:text-4xl font-normal leading-snug text-balance font-serif italic underline">
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
 
@@ -137,11 +138,13 @@ export default function Home() {
       {/* FIM DA SEÇÃO HERO */}
 
 
-      {/* PINTA, dibuja online Section - AJUSTE 1 APLICADO */}
+      {/* PINTA, dibuja online Section - AJUSTE 3 APLICADO */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          {/* Ajuste 1: Font Weight 700 (font-bold), Size 56px (text-[56px]), Line Height 63px (leading-[63px]) */}
-          <h2 className="text-[56px] leading-[63px] font-bold text-center mb-4">
+          {/* Ajuste 3: Tamanho da fonte responsivo para mobile e desktop */}
+          {/* Por padrão, o Tailwind é mobile-first. text-3xl será o padrão para mobile. */}
+          {/* md:text-[56px] md:leading-[63px] aplicará 56px de tamanho e 63px de line-height apenas em telas médias e maiores. */}
+          <h2 className="text-3xl leading-tight md:text-[56px] md:leading-[63px] font-bold text-center mb-4">
             PDTA: ¿Si un niño de 13 años pudo,{" "}
             <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
               por qué tú no?
@@ -167,14 +170,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SEÇÃO "DOS OPCIONES" - AJUSTE 2 APLICADO --- */}
+      {/* --- SEÇÃO "DOS OPCIONES" - AJUSTE 1 APLICADO --- */}
       <section className="py-20 px-4 bg-black text-white">
         <div className="container mx-auto max-w-6xl">
 
-          {/* Ajuste 2: Fontes, Pesos e Tamanhos aplicados */}
+          {/* Ajuste 1: Font Weight 400 (font-normal) para "dos opciones..." */}
           <h2 className="text-[56px] leading-[63px] text-center mb-16">
             <span className="font-normal">Ahora tienes</span>{" "}
-            <span className="font-serif italic font-semibold underline">dos opciones...</span>
+            <span className="font-serif italic font-normal underline">dos opciones...</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16 max-w-6xl mx-auto relative items-stretch">

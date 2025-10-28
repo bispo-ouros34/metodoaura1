@@ -83,27 +83,27 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
 
-      {/* Hero Section - AJUSTES 1, 2 e 3 APLICADOS */}
+      {/* Hero Section - TAMANHOS MOBILE REDUZIDOS */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-6">
 
-              {/* AJUSTE 1: Metade do tamanho, font-bold em vez de font-black */}
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug text-balance font-serif italic underline">
+              {/* AJUSTE 1 (Mobile): text-2xl -> text-xl */}
+              <h1 className="text-xl md:text-3xl lg:text-4xl font-bold leading-snug text-balance font-serif italic underline">
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
 
-              {/* AJUSTE 2: Mesmo tamanho, mesma linha */}
-              <p className="text-3xl md:text-4xl text-gray-200 leading-relaxed">
+              {/* AJUSTE 2 (Mobile): text-3xl -> text-lg */}
+              <p className="text-lg md:text-4xl text-gray-200 leading-relaxed">
                 Presentación revela cómo generar entre 100 a 500 dólares al día con la metodología de
                 <span className="font-bold text-purple-400">
                   {" "}“Productos extranjeros virales”
                 </span>
               </p>
 
-              {/* AJUSTE 3: Levemente maior */}
-              <p className="text-xl md:text-2xl text-gray-300">
+              {/* AJUSTE 3 (Mobile): text-xl -> text-base */}
+              <p className="text-base md:text-2xl text-gray-300">
                 (Cualquier persona puede ganar dinero en menos de 7 días... te pruebo cómo)
               </p>
 
@@ -112,7 +112,7 @@ export default function Home() {
                   ¡DALE CLICK ABAJO!
                 </p>
                 <p className="text-xs text-gray-400">
-                  (El video inicia en un momento)
+                  (El video inicia en um momento)
                 </p>
               </div>
             </div>

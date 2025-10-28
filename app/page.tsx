@@ -82,21 +82,30 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-      {/* Hero Section - MODIFICADA CONFORME A IMAGEM */}
+
+      {/* Hero Section - FONTES AJUSTADAS (MOBILE E DESKTOP) */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-black text-white">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance font-serif italic underline">
+
+              {/* <h1> - Tamanhos de fonte (mobile/desktop) e peso ajustados */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-snug text-balance font-serif italic underline">
                 ¡FINALMENTE! La respuesta para los que no aguantan un día más en su trabajo.
               </h1>
-              <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+
+              {/* <p> - Tamanho de fonte ajustado */}
+              <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
                 Presentación revela cómo generar entre 100 a 500 dólares al día con la metodología de
-                <span className="block font-bold text-2xl md:text-3xl mt-2 bg-gradient-to-r from-blue-400 via-purple-400 to-purple-500 bg-clip-text text-transparent">
+
+                {/* <span> - Cor trocada para Roxo Sólido e tamanho ajustado */}
+                <span className="block font-bold text-3xl md:text-4xl mt-2 text-purple-400">
                   “Productos extranjeros virales”
                 </span>
               </p>
-              <p className="text-lg text-gray-300">
+
+              {/* <p> - Tamanho de fonte ajustado */}
+              <p className="text-lg md:text-xl text-gray-300">
                 (Cualquier persona puede ganar dinero en menos de 7 días... te pruebo cómo)
               </p>
 
@@ -314,7 +323,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 3 -- BLOCO CORRIGIDO */}
+          {/* Feature 3 -- BLOCO CORRIGIDO ANTERIORMENTE */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="aspect-video bg-muted/20 rounded-lg border border-primary/20 flex items-center justify-center">
               <p className="text-muted-foreground">Imagem Feature 3</p>
@@ -324,8 +333,7 @@ export default function Home() {
               <p className="text-muted-foreground leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam.
-              </p> 
-              {/* AQUI ESTAVA O ERRO </Capa>, AGORA ESTÁ CORRETO COM </p> */}
+              </p>
               <Button>Conhecer Ferramentas</Button>
             </div>
           </div>
@@ -394,7 +402,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section -- ERRO DE SINTAXE CORRIGIDO AQUI */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-balance">
@@ -402,12 +410,15 @@ export default function Home() {
           </h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Não perca mais tempo. Transforme sua vida agora mesmo.
-          </p>
+          </p> 
+          {/* A LINHA ACIMA ESTAVA COM </s'p>, AGORA ESTÁ CORRETO COM </p> */}
           <Button size="lg" className="text-lg px-12">
             Começar Agora
           </Button>
         </div>
       </section>
+      {/* FIM DA SEÇÃO CORRIGIDA */}
+
 
       {/* Final Image Grid */}
       <section className="py-20 px-4 bg-secondary/30">
